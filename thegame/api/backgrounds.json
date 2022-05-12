@@ -1,0 +1,218 @@
+[
+    {
+        "id" : "RBwKHVErAo1T6254555d4ffbf",
+        "path" : "thegame/img/backgrounds/bg-cartoon-platformer-2",
+        "name" : "Cartoon Platformer 2",
+        "value" : "9999"
+    },
+
+
+
+]
+
+
+
+backgrounds         : {
+            'bg-cartoon-platformer-2' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png',
+                'bg-06.png',
+                'bg-07.png'
+            ],
+            'bg-desert-1' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png',
+                'bg-06.png'
+            ],
+            'bg-horizontal-2d-1' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png',
+                'bg-06.png',
+                'bg-07.png'
+            ],
+            'bg-horizontal-2d-2' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png',
+                'bg-06.png',
+                'bg-07.png',
+                'bg-08.png',
+                'bg-09.png'
+            ],
+            'bg-horizontal-2d-3' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png',
+                'bg-06.png',
+                'bg-07.png',
+                'bg-08.png'
+            ],
+            'bg-horizontal-2d-4' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png'
+            ],
+            'bg-summer-1' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png',
+                'bg-06.png',
+                'bg-07.png',
+            ],
+            'bg-cartoon-forest-1' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png'
+            ],
+            'bg-cartoon-forest-2' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png'
+            ],
+            'bg-cartoon-forest-3' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png'
+            ],
+            'bg-cartoon-platformer-4' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png',
+                'bg-06.png',
+                'bg-07.png',
+                'bg-08.png',
+                'bg-09.png'
+            ],
+            'bg-cartoon-forest-4' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png'
+            ],
+            'bg-florest-nice-1' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png'
+            ],
+            'bg-cartoon-platformer-3' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png',
+                'bg-06.png'
+            ],
+            'bg-cartoon-platformer' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png',
+                'bg-06.png',
+                'bg-07.png'
+            ],
+            'bg-green-zone-night' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png'
+            ],
+            'bg-green-zone' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png'
+            ],
+            'bg-industrial-zone' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png'
+            ],
+            'bg-desert-scrolling-1' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png'
+            ],
+            'bg-desert-scrolling-2' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png'
+            ],
+            'bg-halloween-1' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png',
+                'bg-06.png',
+                'bg-07.png'
+            ],
+            'bg-halloween-2' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png',
+                'bg-06.png'
+            ]
+        },
+        // :: position terrain ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        posTerrain          : {
+            'bg-cartoon-platformer-2' : '50px',
+            'bg-desert-1' : '51px',
+            'bg-horizontal-2d-1' : '13px',
+            'bg-horizontal-2d-2' : '0px',
+            'bg-horizontal-2d-3' : '0px',
+            'bg-horizontal-2d-4' : '0px',
+            'bg-summer-1' : '40px',
+            'bg-cartoon-forest-1' : '16px',
+            'bg-cartoon-forest-2' : '16px',
+            'bg-cartoon-forest-3' : '16px',
+            'bg-cartoon-platformer-4' : '20px',
+            'bg-cartoon-forest-4' : '16px',
+            'bg-florest-nice-1' : '40px',
+            'bg-cartoon-platformer-3' : '58px',
+            'bg-cartoon-platformer' : '60px',
+            'bg-green-zone-night' : '0px',
+            'bg-green-zone' : '0px',
+            'bg-industrial-zone' : '20px',
+            'bg-desert-scrolling-1' : '24px',
+            'bg-desert-scrolling-2' : '24px',
+            'bg-halloween-1' : '34px',
+            'bg-halloween-2' : '32px'
+        },

@@ -1,0 +1,422 @@
+[
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/097/avatar-1646416842-lrcNbP7NM4.mp3",
+        "artist": "RYVN",
+        "track": "Avatar",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/097/100x100/avatar-1646416838-uD54Fn13pH.png",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/095/freedom-1646139639-w40yOUD1MG.mp3",
+        "artist": "Goodknight.",
+        "track": "Freedom",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/095/100x100/freedom-1646139635-EJYUbSeAa6.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/091/ray-of-light-1645189236-AExoHzOihe.mp3",
+        "artist": "Nieko, Zack Merci",
+        "track": "Ray Of Light",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/091/100x100/ray-of-light-1645189233-ZclOFaNWQN.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/080/circus-1643112038-TNodCSU1cJ.mp3",
+        "artist": "Isolated",
+        "track": "Circus",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/080/100x100/circus-1643112035-LRX7msrij3.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/073/let-me-go-1641902437-UxXbdyBdUo.mp3",
+        "artist": "Jimmy Rivler, Max Vermeulen, Almost Weekend",
+        "track": "Let Me Go",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/073/100x100/let-me-go-1641902432-saulgdlRnj.jpg",
+        "genre": "Trap, Electronic"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/072/got-me-1641556838-kjLzelwxc0.mp3",
+        "artist": "Nito-Onna, Poylow",
+        "track": "Got Me",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/072/100x100/got-me-1641556834-pzqZFaFeeN.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/071/ill-be-here-1641466839-ePQKhsGgEO.mp3",
+        "artist": "Noctilucent, METAHESH, Heuse",
+        "track": "I'll Be Here",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/071/100x100/ill-be-here-1641466835-oIizvXG6Hj.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/062/when-we-leavin-1640260848-jNsq3AER3u.mp3",
+        "artist": "Peter Piffen, Too Martian, IntoAlter",
+        "track": "When We Leavin",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/062/100x100/when-we-leavin-1640260845-0C60YOFLPG.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/057/hate-you-1639738837-t3bnjQUuNm.mp3",
+        "artist": "Nito-Onna, BAUWZ, Poylow",
+        "track": "Hate You",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/057/100x100/hate-you-1639738834-lq4ZzZDKcB.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/041/full-speed-ahead-1637236835-www3geuOKN.mp3",
+        "artist": "Wanden, Slashtaq",
+        "track": "Full Speed Ahead",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/041/100x100/full-speed-ahead-1637236832-U1VNrsgJyJ.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/035/push-the-gas-1636120837-lMBDr3UvEl.mp3",
+        "artist": "The LJ, M.I.M.E",
+        "track": "Push The Gas",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/035/100x100/push-the-gas-1636120832-Wtjyskugxm.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/031/ropes-1635418836-F129pHYl3j.mp3",
+        "artist": "Chandler Jewels, Dirty Palm",
+        "track": "Ropes",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/031/100x100/ropes-1635418832-3OErzvJKC5.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/026/1634660159_rbMnZKsTai_Le-Malls---FOR-YOU-NCS10-Release.mp3",
+        "artist": "Le Malls",
+        "track": "FOR YOU",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/026/100x100/1634660158_VrxvY6BK0U_1.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/013/numb-the-pain-1632830435-Y79xc7Pkve.mp3",
+        "artist": "Shiah Maisel, Anikdote, CHENDA, Le Malls, Catas, Clarx",
+        "track": "Numb The Pain",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/013/100x100/numb-the-pain-1632830432-APM8U2SmSU.jpg",
+        "genre": "Indie, Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/002/zero-gravity-1630580436-wPRwWRirle.mp3",
+        "artist": "Jauque X, Tom Wilson",
+        "track": "Zero Gravity",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/002/100x100/zero-gravity-1630580432-0wxac0RIr3.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/000/high-1630069243-NMioALN06H.mp3",
+        "artist": "Aleesia, JPB",
+        "track": "High",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/000/100x100/1631546326_KnOkxxUdUS_Final-5.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/963/power-1623945636-cmtHdqhL1v.mp3",
+        "artist": "Godmode, LBLVNC",
+        "track": "Power !",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/963/100x100/power-1623945632-f2IYxNfTMb.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/952/need-you-1621951234-DdIeIyFtQ3.mp3",
+        "artist": "if found",
+        "track": "Need You",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/952/100x100/need-you-1621951230-d2WKA4iTM3.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/950/game-over-1621515634-QoO4gwi3Oq.mp3",
+        "artist": "EMM, Egzod",
+        "track": "Game Over ",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/950/100x100/game-over-1621515630-RkJKCl3hXb.png",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/947/cant-deny-1621000836-w3mhyO7Sdv.mp3",
+        "artist": "if found",
+        "track": "Can't Deny",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/947/100x100/cant-deny-1621000833-rbms4djY4j.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/946/left-me-blind-1620910835-DNvRs3x886.mp3",
+        "artist": "Halvorsen, VØNH, Raptures.",
+        "track": "Left Me Blind",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/946/100x100/left-me-blind-1620910831-YLUHMkn2tK.png",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/941/met-you-1619776842-DXb9k22dkc.mp3",
+        "artist": "if found",
+        "track": "Met You",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/941/100x100/met-you-1619776838-rzOjav0cQG.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/937/shudder-1619172032-LyqUPFaNXD.mp3",
+        "artist": "EMM, Jim Yosef",
+        "track": "Shudder",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/937/100x100/1620133021_btfpd1DvCS_Artwork.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/936/royalty-1619082033-7RC2AlRdd1.mp3",
+        "artist": "Maestro Chives, Egzod",
+        "track": "Royalty",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/936/100x100/royalty-1619082030-xBgqGZWLw9.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/931/1618477895_TEZZaF5piz_DISTO--Todd-Helder---DISTODD-NCS-Release.mp3",
+        "artist": "Todd Helder",
+        "track": "DISTODD",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/931/100x100/distodd-1617984032-ceWtCCWoZS.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/924/elevate-1616680833-XPnw6dmLhl.mp3",
+        "artist": "Arcando, Fabian Mazur",
+        "track": "Elevate",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/924/100x100/elevate-1616680829-gXVqsL20O4.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/922/top-floor-1616158832-VjyKFKdpl9.mp3",
+        "artist": "JPB",
+        "track": "Top Floor",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/922/100x100/top-floor-1616158829-1oEvjxIZyY.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/917/freaky-1615294832-LxGuqko8u8.mp3",
+        "artist": "Hush",
+        "track": "Freaky",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/917/100x100/freaky-1615294830-fSQEE5SMyn.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/912/young-wild-free-1614333632-xGqBA20Zwl.mp3",
+        "artist": "Vosai",
+        "track": "Young & Wild & Free",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/912/100x100/young-wild-free-1614333630-w1BIujxRP1.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/911/burn-em-explicit-1614092438-4x7GzFZ0LY.mp3",
+        "artist": "OTG Stiffy, The FifthGuys, Mandrazo",
+        "track": "Burn 'Em (Explicit)",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/911/100x100/burn-em-explicit-1614092434-xJZUeGWDBu.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/910/run-for-your-life-1613754037-kmRk1tZzDy.mp3",
+        "artist": "Tom Wilson",
+        "track": "Run For Your Life ",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/910/100x100/run-for-your-life-1613754034-PBCg90kPGQ.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/909/1613675182_Ql9bmO30dy_32Stitches---Uncharted-NCS-Release.mp3",
+        "artist": "32Stitches",
+        "track": "Uncharted",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/909/100x100/1613675182_0IKvAczCXJ_Artwork2.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/904/touchdown-1612530035-cbHYvvHdea.mp3",
+        "artist": "M.I.M.E, N3WPORT",
+        "track": "Touchdown",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/904/100x100/touchdown-1612530032-KEToyqvmDT.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/901/1612865138_tksCdbpEFx_Egzod-EMM---Dont-Surrender-Abandoned-Remix-NCS-Release.mp3",
+        "artist": "Abandoned, EMM, Egzod",
+        "track": "Don't Surrender",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/901/100x100/dont-surrender-1612454433-tf6wf87sP7.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/903/the-revolution-1612454454-WLdzt3tdFe.mp3",
+        "artist": "Arc North, Neoni, Egzod",
+        "track": "The Revolution",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/903/100x100/the-revolution-1612454450-97lxhUL6he.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/896/swalla-1611320432-KTFvgKxkXC.mp3",
+        "artist": "Mandrazo, Julius Dreisig",
+        "track": "Swalla",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/896/100x100/swalla-1611320429-9cGRL9HULv.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/891/trouble-with-love-1610460031-siOsB8afDR.mp3",
+        "artist": "SOXX",
+        "track": "Trouble With Love",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/891/100x100/trouble-with-love-1610460028-dKHzFjXWqW.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/890/losing-control-1610121631-P9GX1l4YOO.mp3",
+        "artist": "Mendum, JPB",
+        "track": "Losing Control",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/890/100x100/losing-control-1610121628-8vpDMAT4bO.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/882/obey-1608804032-C6YDjbj8r8.mp3",
+        "artist": "Barren Gates",
+        "track": "Obey",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/882/100x100/obey-1608804028-ChSEFuAfcQ.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/881/calm-before-the-storm-1608627631-CELPrgeN44.mp3",
+        "artist": "Centrix, Dani King, Rebel Scum",
+        "track": "Calm Before The Storm",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/881/100x100/calm-before-the-storm-1608627628-KdP6qZgAce.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/873/never-stop-1607680831-6DyPCJYGY9.mp3",
+        "artist": "Todd Helder",
+        "track": "Never Stop",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/873/100x100/never-stop-1607680827-OXiJWE9MWb.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/859/oh-darling-1606474852-RYsQD3z8OV.mp3",
+        "artist": "Unknown Brain",
+        "track": "Oh Darling ",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/859/100x100/oh-darling-1606474850-LpCknnplQ0.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/863/let-you-go-1606474879-fDhRqEaw7Q.mp3",
+        "artist": "Unknown Brain, NotEvenTanner",
+        "track": "Let You Go",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/863/100x100/let-you-go-1606474876-I36lsPBvoX.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/854/jungle-of-love-1606240829-bncyQLTnxz.mp3",
+        "artist": "Unknown Brain, Glaceo",
+        "track": "Jungle Of Love",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/854/100x100/jungle-of-love-1606240827-GZiwJlW7yq.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/853/phenomenon-1605895230-EleosL4jlP.mp3",
+        "artist": "Dax, VinDon, Unknown Brain",
+        "track": "Phenomenon",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/853/100x100/phenomenon-1605895227-fAhxMTrRpG.jpg",
+        "genre": "Trap, Bass"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/850/you-made-a-monster-1605283231-IhjhUZmSW2.mp3",
+        "artist": "Barren Gates",
+        "track": "You Made A Monster",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/850/100x100/you-made-a-monster-1605283227-OH4kQTTB0W.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/841/im-sorry-mom-1603458027-A676v5xL55.mp3",
+        "artist": "Kyle Reynolds, Unknown Brain",
+        "track": "I'm Sorry Mom",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/841/100x100/1603710110_294bvs52gV_SorryMom_Artwork_1920x1920_reduced.png",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/831/long-night-1601564430-ZplSg6LZbx.mp3",
+        "artist": "JPB",
+        "track": "LONG NIGHT",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/831/100x100/long-night-1601564427-yYOSUE5mGW.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/826/ignite-1600419629-48VJLcO6hO.mp3",
+        "artist": "Tom Wilson, Heuse",
+        "track": "Ignite",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/826/100x100/ignite-1600419626-nHn4WXY79q.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/825/mutiny-1600336830-cqpFPcY6QL.mp3",
+        "artist": "Wasiu, Egzod",
+        "track": "Mutiny",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/825/100x100/mutiny-1600336826-HNQVbXawE3.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/819/the-revolution-1599123629-J2QfBCQO77.mp3",
+        "artist": "Neoni, Egzod",
+        "track": "The Revolution",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/819/100x100/the-revolution-1599123626-LSluxb4hlV.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/792/power-1597319499-Ljh76rCaN8.mp3",
+        "artist": "braev, N3WPORT",
+        "track": "Power",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/792/100x100/power-1597319496-DWUroIjXMW.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/787/1597659928_R770IG5BLR_Jagsy--Tom-Wilson---All-My-Love-ft.-Braev-NCS-Release.mp3",
+        "artist": "Tom Wilson, Jagsy, braev",
+        "track": "All My Love",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/787/100x100/all-my-love-1597319456-LKJy8hF5Id.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/780/better-off-1597319410-vHK5QNbOt2.mp3",
+        "artist": "Slashtaq, Wanden",
+        "track": "Better Off",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/780/100x100/better-off-1597319407-v2nEgrhXkb.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/804/spirits-say-1597410103-Teo4X1oqdF.mp3",
+        "artist": "Heuse, Caravn",
+        "track": "Spirits Say",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/804/100x100/spirits-say-1597410100-FFjbrkhXys.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/768/they-watchin-me-1597319321-rLRvMNcPDq.mp3",
+        "artist": "Aleksei, Will Wells, Leat'eq, ELEX",
+        "track": "They Watchin Me",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/768/100x100/they-watchin-me-1597319318-J8LNSUGaZY.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/764/find-you-1597319300-d0xDJuQBjh.mp3",
+        "artist": "Tinoma",
+        "track": "Find You",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/764/100x100/find-you-1597319298-WOsY8ryUCx.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/757/closer-1597319256-Ww5iJjxOjW.mp3",
+        "artist": "TITUS, Guy Arthur, Todd Helder",
+        "track": "Closer",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/757/100x100/closer-1597319254-bSa7P0kKzW.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/756/army-1597319251-ObmDuwWdiZ.mp3",
+        "artist": "Neoni, Arcando, Besomorph",
+        "track": "Army",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/756/100x100/army-1597319248-sSh63D8GDi.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/745/lonely-1597319166-q7YKNXQ4MV.mp3",
+        "artist": "Nara, 2 Souls",
+        "track": "Lonely",
+        "cover": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/745/100x100/lonely-1597319163-BzPfc59fd6.jpg",
+        "genre": "Trap"
+    }
+]
