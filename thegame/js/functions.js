@@ -5,7 +5,7 @@
 // v.00bond (a wizard company)
 // - - - - - - - - - - - - - - - - - - -
 // #wf-202202112257
-// #wf-202205121446
+// #wf-202205121935
 // - - - - - - - - - - - - - - - - - - -
 // WIZARD FLY [adonis vieira]
 // http://wizrdfly.rf.gd
@@ -533,8 +533,8 @@ Wapp.STG = Wapp.STG || {};
         // console.log('DISABLED create FRUITS');
 
         // add ICON fruit in text INFOS
-        // Wapp.STG.IconsInfo();
-        console.log('DISABLED > Wapp.STG.IconsInfo');
+        Wapp.STG.IconsInfo();
+        // console.log('DISABLED > Wapp.STG.IconsInfo');
 
         // -----------------------------------------------------
         // change background (set first background)
