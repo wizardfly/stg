@@ -5,7 +5,7 @@
 // v.00bond (a wizard company)
 // - - - - - - - - - - - - - - - - - - -
 // #wf-202202112257
-// #wf-202205121946
+// #wf-202205141754
 // - - - - - - - - - - - - - - - - - - -
 // WIZARD FLY [adonis vieira]
 // http://wizrdfly.rf.gd
@@ -18,14 +18,14 @@
 	<meta charset="utf-8"/>
 	<meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-	<link rel="icon" type="image/ico" href="https://wizardfly.github.io/stg/thegame/img/favicon.ico"/>
+	<link rel="icon" type="image/ico" href="thegame/img/favicon.ico"/>
 
 	<!-- share -->
 	<meta property="og:title" content="STG - Street Game"/>
 	<meta property="og:type" content="website"/>
-	<meta property="og:url" content="https://wizardfly.github.io/stg/"/>
-	<meta property="og:image" content="https://wizardfly.github.io/stg/thegame/img/bg-share.png"/>
-	<meta property="og:description" content="Simple plataform game, collect fruits and unlock news features..."/>
+	<meta property="og:url" content="http://stg.42web.io"/>
+	<meta property="og:image" content="http://stg.42web.io/thegame/img/bg-share.png"/>
+	<meta property="og:description" content="Collect fruits and unlock news features..."/>
 	<meta property="og:site_name" content="STG - Street Game"/>
 
 	<!-- icons -->
@@ -243,7 +243,7 @@
 							<li>
 								<p>
 									<strong>
-										Free host files | Deploy publish
+										Free host files | Page deploy publish
 									</strong>
 									<a href="https://infinityfree.net/" target="_blank" title="InfinityFree">
 										InfinityFree
@@ -326,8 +326,8 @@
 									<a href="https://oferta.vc/v2/95adc32388" target="_blank" title="lomadee.com">
 										lomadee.com
 									</a>
-									<a href="https://pages.github.com/" target="_blank" title="pages.github.com">
-										pages.github.com
+									<a href="https://pages.github.com/" target="_blank" title="Pages.github">
+										Pages.github
 									</a>
 								</p>
 							</li>
@@ -813,6 +813,47 @@
 						</ul>
 
 						<!--
+						::::::::::::
+						:: CURSOR ::
+						::::::::::::
+						-->
+						<h4>
+							Cursor
+						</h4>
+						<ul>
+							<li class="resources">
+								<p>
+									<strong>
+										Select cursor style
+										<i class="development">
+											em desenvolvimento
+										</i>
+									</strong>
+								</p>
+								<form>
+									<fieldset>
+										<label title="default">
+											<input type="radio" name="cursor" value="default" checked="checked"/>
+											default
+										</label>
+										<label title="white">
+											<input type="radio" name="cursor" value="white"/>
+											<img src="thegame/img/cursor-white.cur" alt="white"/>
+										</label>
+										<label title="black">
+											<input type="radio" name="cursor" value="black"/>
+											<img src="thegame/img/cursor-black.cur" alt="black"/>
+										</label>
+										<label title="blue">
+											<input type="radio" name="cursor" value="blue"/>
+											<img src="thegame/img/cursor-blue.cur" alt="blue"/>
+										</label>
+									</fieldset>
+								</form>
+							</li>
+						</ul>
+
+						<!--
 						:::::::::::
 						:: INFOS ::
 						:::::::::::
@@ -824,7 +865,10 @@
 							<li>
 								<p>
 									<strong>
-										Development details [coming soon!]
+										Development details...
+										<i class="development">
+											em desenvolvimento
+										</i>
 									</strong>
 								</p>
 								<a href="#" title="Info" class="btnShowHide" data-els=".section.modals, .modal.info"  style="display:none !important;">
@@ -851,7 +895,10 @@
 							<li>
 								<p>
 									<strong>
-										Save your points [coming soon!]
+										Save your points
+										<i class="development">
+											em desenvolvimento
+										</i>
 									</strong>
 								</p>
 								<div class="login">
@@ -951,11 +998,13 @@
 			<div class="status">
 				<div class="thumb">
 					<!-- <i class="sprAlien01 picture"></i> -->
-					<img src="thegame/img/players/avt-alien-01.png" alt="store"/>
+					<!-- <img src="thegame/img/players/avt-alien-01.png" alt="store"/> -->
+					<img src="thegame/img/players/avt-dog-02.png" alt="store"/>
 				</div>
 				<ul class="info">
 					<li class="name">
-						Dude Monster
+						<!-- Dude Monster -->
+						Shelba Inu
 						<!-- dynamic content -->
 					</li>
 					<li class="speed">
@@ -1168,6 +1217,9 @@
 								</strong>
 								<i class="sprTreasure sprGolds"></i>
 								Jogue e ganhe moedas...
+								<i class="development">
+									em desenvolvimento
+								</i>
 							</p>
 						</div>
 						...
@@ -1178,7 +1230,8 @@
 					:: PLAYER ::
 					::::::::::::
 					-->
-					<i class="player alien01 sprAlien01 idle"></i>
+					<!-- <i class="player alien01 sprAlien01 idle"></i> -->
+					<i class="player dog02 sprDog02 player idle"></i>
 
 					<!--
 					::::::::::::::
@@ -1282,9 +1335,9 @@
 							<i class="sprTreasure sprMessage"></i>
 							<p>
 								<strong>
-									Colete os itens!
+									Exploração
 								</strong>
-								Explore essa direção, você poderá coletar itens fazendo algumas atividades, os items serão consumidos na loja!
+								Você poderá coletar itens fazendo algumas atividades, os itens serão consumidos na loja!
 							</p>
 						</div>
 						<!-- /TIP: collects -->
@@ -1296,8 +1349,8 @@
 								<strong>
 									Coleta de Frutas
 								</strong>
-								Colete os items...<br/>
-								<i>
+								Colete os itens...
+								<i class="development">
 									em desenvolvimento
 								</i>
 							</p>
@@ -1312,7 +1365,7 @@
 									Cassino Xinoda
 								</strong>
 								baralho, jogo de cartas 21...<br/>
-								<i>
+								<i class="development">
 									em desenvolvimento
 								</i>
 							</p>
@@ -1324,10 +1377,10 @@
 							<i class="sprTreasure sprMessage"></i>
 							<p>
 								<strong>
-									Items extras
+									Itens extras
 								</strong>
-								Esse será os items extras a serem coletados durante o jogo...<br/>
-								<i>
+								Esse será os itens extras a serem coletados durante o jogo...<br/>
+								<i class="development">
 									em desenvolvimento
 								</i>
 							</p>
@@ -1342,6 +1395,9 @@
 									Loja
 								</strong>
 								Siga para a loja e adquira novos personagens, áreas, temas, músicas... Utilizando os itens que você coletou!
+								<i class="development">
+									em desenvolvimento
+								</i>
 							</p>
 						</div>
 						<!-- /TIP: store -->
@@ -1421,7 +1477,7 @@
 									Crafite a Nuke
 								</strong>
 								Enriqueça o urânio clicando, assim você construirá uma arma nuclear...<br/>
-								<i>
+								<i class="development">
 									em desenvolvimento
 								</i>
 							</p>
@@ -1435,8 +1491,8 @@
 								<strong>
 									Conquistas
 								</strong>
-								Nessa área alguns patrocinadores, poderão oferecer items para executar determinadas tarefas...<br/>
-								<i>
+								Nessa área alguns patrocinadores, poderão oferecer itens para executar determinadas tarefas...<br/>
+								<i class="development">
 									em desenvolvimento
 								</i>
 							</p>
@@ -1581,13 +1637,17 @@
 					<img src="thegame/img/bg-store.png" class="bg" alt="store"/>
 					<p>
 						<strong>
-							WizSTORE
+							Wiz'STORE
 						</strong>
 						<em>
-							loja... em desenvolvimento<br/>
+							Compre os recursos, player, músicas...
+							<i class="development">
+								em desenvolvimento
+							</i>
 						</em>
 						<!-- button -->
-						<a href="#" class="btn btnShowHide" title="Enter in store" data-els=".section.modals, .modal.store">
+						<!-- <a href="#" class="btn btnShowHide" title="Enter in store" data-els=".section.modals, .modal.store"> -->
+						<a href="#" class="btn btnShowHide" title="Enter in store">
 							<i class="fa-solid fa-cart-shopping"></i>
 						</a>
 					</p>
@@ -1847,143 +1907,64 @@
 		<!-- music player -->
 		<audio class="music"></audio>
 
-		<!-- music progress -->
-		<div class="progressBar">
-			<span class="seekbar"></span>
-			<b>
-				NoCopyrightSounds
-			</b>
-		</div>
+		<!-- music box -->
+		<div class="mBox">
+			<!-- music contents -->
+			<div class="brand">
+				<img src="thegame/img/ncs-brand.png" alt="ncs"/>
+			</div>
+			<ul>
+				<li>
+					<a href="#" title="Playlist" class="mList">
+						<i class="fa-solid fa-music"></i>
+						<i class="fa-solid fa-xmark"></i>
+					</a>
+				</li>
+			</ul>
 
-		<!-- music playing -->
-		<div class="playing">
-			<a href="https://ncs.io" title="Download" class="mDownload" target="_blank">
-				<!-- <span class="material-icons-outlined">
-					headphones
-				</span> -->
-			</a>
-			<p>
-				<strong>
-					Music name
-				</strong>
-				<em>
-					Artist name
-				</em>
-			</p>
-		</div>
+			<!-- music progress -->
+			<div class="progressBar">
+				<span class="seekbar">
+					<!-- dynamic content -->
+				</span>
+			</div>
 
-		<!-- music contents -->
-		<div class="brand">
-			<img src="thegame/img/ncs-brand.png" alt="ncs"/>
+			<!-- music playing -->
+			<div class="playing">
+				<p>
+					<strong>
+						Music
+						<!-- dynamic content -->
+					</strong>
+					<em>
+						Artist
+						<!-- dynamic content -->
+					</em>
+				</p>
+				<a href="https://ncs.io" title="Download" class="mDownload" target="_blank">
+					<i class="fa-solid fa-copyright"></i>
+				</a>
+			</div>
+
+			<!-- music playlist -->
+			<ul class="playlist">
+				<!-- <li>
+					<p>
+						<strong>
+							Light It Up
+						</strong>
+						<em>
+							Robin Hustin, Tobimorrow
+						</em>
+					</p>
+					<a href="#" title="Play" class="mPlay" data-file="/tracks/000/000/520/light-it-up-1586955429-8ILNNkBc2M" data-name="Light It Up" data-artist="Robin Hustin, Tobimorrow" data-download="https://ncs.io/lightitup">
+						<i class="fa-solid fa-circle-play"></i>
+					</a>
+				</li> -->
+
+				<!-- dynamic content -->
+			</ul>
 		</div>
-		<ul>
-			<li>
-				<a href="#" title="Playlist" class="mList">
-					<!-- <span class="material-icons-outlined">
-						queue_music
-					</span> -->
-					<i class="fa-solid fa-music"></i>
-				</a>
-			</li>
-		</ul>
-		<ul class="playlist">
-			<li>
-				<p>
-					<strong>
-						Light It Up
-					</strong>
-					<em>
-						Robin Hustin, Tobimorrow
-					</em>
-				</p>
-				<a href="#" title="Play" class="mPlay" data-file="/tracks/000/000/520/light-it-up-1586955429-8ILNNkBc2M" data-name="Light It Up" data-artist="Robin Hustin, Tobimorrow" data-download="https://ncs.io/lightitup">
-					<!-- <span class="material-icons-outlined">
-						play_circle
-					</span> -->
-					<i class="fa-solid fa-circle-play"></i>
-				</a>
-			</li>
-			<li>
-				<p>
-					<strong>
-						Avatar
-					</strong>
-					<em>
-						RYVN
-					</em>
-				</p>
-				<a href="#" title="Play" class="mPlay" data-file="/tracks/000/001/097/avatar-1646416842-lrcNbP7NM4" data-name="Avatar" data-artist="RYVN" data-download="https://ncs.io/Avatar">
-					<!-- <span class="material-icons-outlined">
-						play_circle
-					</span> -->
-					<i class="fa-solid fa-circle-play"></i>
-				</a>
-			</li>
-			<li>
-				<p>
-					<strong>
-						Got Me
-					</strong>
-					<em>
-						Poylow feat. Nito-Onna
-					</em>
-				</p>
-				<a href="#" title="Play" class="mPlay" data-file="/tracks/000/001/072/got-me-1641556838-kjLzelwxc0" data-name="Got Me" data-artist="Poylow feat. Nito-Onna" data-download="https://ncs.io/GotMe">
-					<!-- <span class="material-icons-outlined">
-						play_circle
-					</span> -->
-					<i class="fa-solid fa-circle-play"></i>
-				</a>
-			</li>
-			<li>
-				<p>
-					<strong>
-						When We Leavin
-					</strong>
-					<em>
-						IntoAlter x Too Martian x Peter Piffen
-					</em>
-				</p>
-				<a href="#" title="Play" class="mPlay" data-file="/tracks/000/001/062/when-we-leavin-1640260848-jNsq3AER3u" data-name="When We Leavin" data-artist="IntoAlter x Too Martian x Peter Piffen" data-download="https://ncs.io/WhenWeLeavin">
-					<!-- <span class="material-icons-outlined">
-						play_circle
-					</span> -->
-					<i class="fa-solid fa-circle-play"></i>
-				</a>
-			</li>
-			<li>
-				<p>
-					<strong>
-						Hate You
-					</strong>
-					<em>
-						Nito-Onna, BAUWZ, Poylow
-					</em>
-				</p>
-				<a href="#" title="Play" class="mPlay" data-file="/tracks/000/001/057/hate-you-1639738837-t3bnjQUuNm" data-name="Hate You" data-artist="Nito-Onna, BAUWZ, Poylow" data-download="https://ncs.io/HateYou">
-					<!-- <span class="material-icons-outlined">
-						play_circle
-					</span> -->
-					<i class="fa-solid fa-circle-play"></i>
-				</a>
-			</li>
-			<li>
-				<p>
-					<strong>
-						Push The Gas
-					</strong>
-					<em>
-						The LJ, M.I.M.E
-					</em>
-				</p>
-				<a href="#" title="Play" class="mPlay" data-file="/tracks/000/001/035/push-the-gas-1636120837-lMBDr3UvEl" data-name="Push The Gas" data-artist="The LJ, M.I.M.E" data-download="https://ncs.io/PushTheGas">
-					<!-- <span class="material-icons-outlined">
-						play_circle
-					</span> -->
-					<i class="fa-solid fa-circle-play"></i>
-				</a>
-			</li>
-		</ul>
 	</section>
 
 	<!--
@@ -2034,6 +2015,9 @@
 				<b>
 					Frutas grátis?
 				</b>
+				<i class="development">
+					em desenvolvimento
+				</i>
 			</p>
 			<ul>
 				<li>
@@ -2067,6 +2051,9 @@
 					Salvar
 				</strong>
 				O progresso será salvo no <b>localstorage</b> do seu navegador!
+				<i class="development">
+					em desenvolvimento
+				</i>
 			</p>
 			<form class="pNone">
 				<fieldset>

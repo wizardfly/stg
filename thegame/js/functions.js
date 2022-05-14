@@ -5,7 +5,7 @@
 // v.00bond (a wizard company)
 // - - - - - - - - - - - - - - - - - - -
 // #wf-202202112257
-// #wf-202205121935
+// #wf-202205141754
 // - - - - - - - - - - - - - - - - - - -
 // WIZARD FLY [adonis vieira]
 // http://wizrdfly.rf.gd
@@ -31,18 +31,24 @@ Wapp.STG = Wapp.STG || {};
     Vars = {
         // :: select quality ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         inpEffects          : doc.querySelectorAll('input[name="effects"]'),
+        // :: box music player ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        boxMusicPlayer      : doc.querySelectorAll('.section.music')[0],
         // :: music player ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         musicPlayer         : doc.querySelectorAll('.section.music audio.music')[0],
         // :: music progress ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         musicBar            : doc.querySelectorAll('.section.music .progressBar .seekbar')[0],
+        // :: music cover :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        musicCover          : doc.querySelectorAll('.section.music .mCover')[0],
         // :: music button play :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-        musicPlay           : doc.querySelectorAll('.section.music ul.playlist li a.mPlay'),
+        // musicPlay           : doc.querySelectorAll('.section.music ul.playlist li a.mPlay'),
         // :: music button pause ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         // musicPause          : doc.querySelectorAll('.section.music ul.playlist li a.mPause')[0],
         // :: music button show list ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         musicList           : doc.querySelectorAll('.section.music ul li a.mList')[0],
         // :: music box playlist ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         musicPlaylist       : doc.querySelectorAll('.section.music ul.playlist')[0],
+        // :: music playlist api ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        musicApi            : 'thegame/api/musics.json',
         // :: box controls mobile :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         controlsMob         : doc.querySelectorAll('.controlsMob')[0],
         // :: position touch start controls mobile ::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -312,17 +318,53 @@ Wapp.STG = Wapp.STG || {};
         death               : doc.querySelectorAll('.game .sprDeath')[0],
         // :: player skins ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         skins               : [
+            'dog02 sprDog02 idle',
             'alien01 sprAlien01 idle',
+            // -----
+            'smDragon01 sprSmDragon01 idle',
+            'demon01 sprDemon01 idle',
+            'hyena01 sprHyena01 idle',
+            'snake01 sprSnake01 idle',
+            'dog01 sprDog01 idle',
+            // -----
+            // 'dog02 sprDog02 idle',
+            // -----
+            'cat01 sprCat01 idle',
+            'bird01 sprBird01 idle',
+            'bird02 sprBird02 idle',
+            'vulture01 sprVulture01 idle',
             'alien02 sprAlien02 idle',
             'alien03 sprAlien03 idle',
+            // -----
+            'iori01 sprIori01 idle',
+            'darkHorseman01 sprDarkHorseman01 idle',
+            'maiShiranui01 sprMaiShiranui01 idle',
         ],
         // :: player skins selected :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         skinsSelected       : 0,
         // :: player name :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         names               : [
+            'Shelba Inu',
             'Dude Monster',
+            // -----
+            'Small Dragon',
+            'Chinelk Rosin',
+            'Shenzi Scar ',
+            'Twin Snkes',
+            'Dobe Doggy',
+            // -----
+            // 'Shiba Inu',
+            // -----
+            'Persa Catch',
+            'Asa Branca',
+            'Corvus Corax',
+            'Buzz Buzzard',
             'Owlet Monster',
             'Pink Monster',
+            // -----
+            'Iori Yagami',
+            'Dark Horseman',
+            'Mai Shiranui',
         ],
         // :: movement player :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         // move                : true,
@@ -411,6 +453,15 @@ Wapp.STG = Wapp.STG || {};
         firstEvent          : true,
         // :: backgrounds :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         backgrounds         : {
+            'bg-summer-1' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png',
+                'bg-06.png',
+                'bg-07.png',
+            ],
             'bg-cartoon-platformer-2' : [
                 'bg-01.png',
                 'bg-02.png',
@@ -420,6 +471,117 @@ Wapp.STG = Wapp.STG || {};
                 'bg-06.png',
                 'bg-07.png'
             ],
+            // -----
+            'bg-desert-1' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png',
+                'bg-06.png'
+            ],
+            'bg-horizontal-2d-1' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png',
+                'bg-06.png',
+                'bg-07.png'
+            ],
+            'bg-horizontal-2d-2' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png',
+                'bg-06.png',
+                'bg-07.png',
+                'bg-08.png',
+                'bg-09.png'
+            ],
+            'bg-horizontal-2d-3' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png',
+                'bg-06.png',
+                'bg-07.png',
+                'bg-08.png'
+            ],
+            'bg-horizontal-2d-4' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png'
+            ],
+            // -----
+            // 'bg-summer-1' : [
+            //     'bg-01.png',
+            //     'bg-02.png',
+            //     'bg-03.png',
+            //     'bg-04.png',
+            //     'bg-05.png',
+            //     'bg-06.png',
+            //     'bg-07.png',
+            // ],
+            // -----
+            'bg-cartoon-forest-1' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png'
+            ],
+            'bg-cartoon-forest-2' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png'
+            ],
+            'bg-cartoon-forest-3' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png'
+            ],
+            'bg-cartoon-platformer-4' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png',
+                'bg-06.png',
+                'bg-07.png',
+                'bg-08.png',
+                'bg-09.png'
+            ],
+            'bg-cartoon-forest-4' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png'
+            ],
+            'bg-florest-nice-1' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png'
+            ],
+            'bg-cartoon-platformer-3' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png',
+                'bg-06.png'
+            ],
+            // -----
             'bg-cartoon-platformer' : [
                 'bg-01.png',
                 'bg-02.png',
@@ -429,11 +591,94 @@ Wapp.STG = Wapp.STG || {};
                 'bg-06.png',
                 'bg-07.png'
             ],
+            // -----
+            'bg-green-zone-night' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png'
+            ],
+            'bg-green-zone' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png'
+            ],
+            // -----
+            'bg-industrial-zone' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png'
+            ],
+            // -----
+            'bg-desert-scrolling-1' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png'
+            ],
+            'bg-desert-scrolling-2' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png'
+            ],
+            'bg-halloween-1' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png',
+                'bg-06.png',
+                'bg-07.png'
+            ],
+            'bg-halloween-2' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png',
+                'bg-06.png'
+            ]
         },
         // :: position terrain ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         posTerrain          : {
+            'bg-summer-1' : '40px',
             'bg-cartoon-platformer-2' : '50px',
+            // -----
+            'bg-desert-1' : '51px',
+            'bg-horizontal-2d-1' : '13px',
+            'bg-horizontal-2d-2' : '0px',
+            'bg-horizontal-2d-3' : '0px',
+            'bg-horizontal-2d-4' : '0px',
+            // -----
+            // 'bg-summer-1' : '40px',
+            // -----
+            'bg-cartoon-forest-1' : '16px',
+            'bg-cartoon-forest-2' : '16px',
+            'bg-cartoon-forest-3' : '16px',
+            'bg-cartoon-platformer-4' : '20px',
+            'bg-cartoon-forest-4' : '16px',
+            'bg-florest-nice-1' : '40px',
+            'bg-cartoon-platformer-3' : '58px',
+            // -----
             'bg-cartoon-platformer' : '60px',
+            // -----
+            'bg-green-zone-night' : '0px',
+            'bg-green-zone' : '0px',
+            // -----
+            'bg-industrial-zone' : '20px',
+            // -----
+            'bg-desert-scrolling-1' : '24px',
+            'bg-desert-scrolling-2' : '24px',
+            'bg-halloween-1' : '34px',
+            'bg-halloween-2' : '32px'
         },
         // :: box message :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         // speed            : doc.querySelectorAll('.changeBg')[0],
@@ -555,6 +800,9 @@ Wapp.STG = Wapp.STG || {};
         // create modal musics select (for STORE)
         // Wapp.STG.CreateMusicSelect();
 
+        // create musics playlist
+        Wapp.STG.CreateMusicPlaylist();
+
         // all listeners
         Wapp.STG.Listen();
 
@@ -611,7 +859,7 @@ Wapp.STG = Wapp.STG || {};
         (Vars.musicList) ? Vars.musicList.addEventListener('click', Wapp.STG.MusicPlaylist, true) : '';
 
         // :: button music play
-        Wapp.STG.AddEvents('click', Vars.musicPlay, Wapp.STG.MusicControls, true);
+        // Wapp.STG.AddEvents('click', Vars.musicPlay, Wapp.STG.MusicControls, true);
 
         // :: select quality
         Wapp.STG.AddEvents('change', Vars.inpEffects, Wapp.STG.ChangeQuality, true);
@@ -2040,7 +2288,7 @@ Wapp.STG = Wapp.STG || {};
                         var x = (boxRect2.left - (- win.innerWidth / 2));
                         // console.log('x', x);
 
-                        var nX = (x + (boxRect2.width / 3));
+                        var nX = (x + (boxRect2.width / 2.5));
                         // console.log('nX', nX);
 
                         // var nBox = doc.querySelectorAll('.boxGame .bgStore')[0].style.left = nX + 'px';
@@ -2926,6 +3174,82 @@ Wapp.STG = Wapp.STG || {};
         */
     };
 
+    /* create music playlist */
+    Wapp.STG.CreateMusicPlaylist = function (e) {
+        // console.log(':: CreateMusicPlaylist [fnc]');
+
+        var
+            ajax = new XMLHttpRequest();
+
+        // AJAX
+        ajax.open('GET', Vars.musicApi, true);
+        ajax.setRequestHeader('Content-Type', 'application/json');
+        ajax.send();
+
+        ajax.onreadystatechange = function () {
+            if (ajax.readyState === 4) {
+                if (ajax.status === 200){
+                    // SUCCESS
+                    // console.log('AJAX - SEND Successfully!',  ajax.responseText);
+
+                    Wapp.STG.PopulatePlaylist(e, ajax.responseText, 'SUCCESS');
+
+                } else {
+                    // ERROR
+                    // console.log('AJAX - SEND Error!',  ajax.returnText);
+
+                    Wapp.STG.PopulatePlaylist(e, ajax.responseText, 'ERROR');
+                }
+            }
+        };
+    };
+
+    /* populate playlist */
+    Wapp.STG.PopulatePlaylist = function (e, obj, status) {
+        // console.log(':: PopulatePlaylist [fnc]');
+
+        // console.log('e', e);
+        // console.log('obj', JSON.parse(obj));
+        // console.log('status', status);
+
+        if (status === 'ERROR') {
+            return false;
+        }
+
+        var
+            html = '';
+
+        [].forEach.call(JSON.parse(obj), function (music) {
+            // console.log('music', music);
+
+            html += '<li>';
+                html += '<p>';
+                    html += '<strong>';
+                        html += music.track;
+                    html += '</strong>';
+                    html += '<em>';
+                        html += music.artist;
+                    html += '</em>';
+                html += '</p>';
+                html += '<a href="#" title="Play" class="mPlay" data-file="' + music.url + '" data-name="' + music.track + '" data-artist="' + music.artist + '" data-cover="' + music.cover + '" data-download="https://ncs.io/music-search?q=' + encodeURI(music.track) + '">';
+                    html += '<i class="fa-solid fa-circle-play"></i>';
+                html += '</a>';
+            html += '</li>';
+        });
+
+        if (Vars.musicPlaylist) {
+            Vars.musicPlaylist.innerHTML = html;
+        }
+
+        // VARS
+        // :: music button play :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        Vars.musicPlay = doc.querySelectorAll('.section.music ul.playlist li a.mPlay');
+
+        // listeners
+        // :: button music play
+        Wapp.STG.AddEvents('click', Vars.musicPlay, Wapp.STG.MusicControls, true);
+    };
+
     /* generate randomic fruits */
     Wapp.STG.RandomFruit = function (e) {
         // console.log(':: RandomFruit [fnc]');
@@ -3203,14 +3527,25 @@ Wapp.STG = Wapp.STG || {};
     Wapp.STG.MusicPlaylist = function (e) {
         // console.log(':: MusicPlaylist [fnc]');
 
-        if (Vars.musicPlaylist) {
-            if (Vars.musicPlaylist.classList.contains('active')) {
-                Vars.musicPlaylist.classList.remove('active');
+        // box music player
+        if (Vars.boxMusicPlayer) {
+            if (Vars.boxMusicPlayer.classList.contains('active')) {
+                Vars.boxMusicPlayer.classList.remove('active');
 
             } else {
-                Vars.musicPlaylist.classList.add('active');
+                Vars.boxMusicPlayer.classList.add('active');
             }
         }
+
+        // music playlist
+        // if (Vars.musicPlaylist) {
+        //     if (Vars.musicPlaylist.classList.contains('active')) {
+        //         Vars.musicPlaylist.classList.remove('active');
+
+        //     } else {
+        //         Vars.musicPlaylist.classList.add('active');
+        //     }
+        // }
 
         e.preventDefault();
         return false;
@@ -3223,26 +3558,29 @@ Wapp.STG = Wapp.STG || {};
         var
             file = e.target.dataset.file,
             name = e.target.dataset.name,
-            // artist = e.target.dataset.artist,
-            // download = e.target.dataset.download,
+            artist = e.target.dataset.artist,
+            cover = e.target.dataset.cover,
+            download = e.target.dataset.download,
             infosMusic = '';
 
-        // infosMusic += '<a href="' + download + '" title="Download" class="mDownload" target="_blank">';
-            // infosMusic += '<span class="material-icons-outlined">';
-            //     infosMusic += 'headphones';
-            // infosMusic += '</span>';
-            infosMusic += '<i class="fa-solid fa-headphones"></i>';
-        // infosMusic += '</a>';
-        // infosMusic += '<p>';
-            // infosMusic += '<strong>';
-                infosMusic += name;
-            // infosMusic += '</strong>';
-            // infosMusic += '<em>';
-                // infosMusic += artist;
-            // infosMusic += '</em>';
-        // infosMusic += '</p>';
+        // console.log('cover', 'https://ncsmusic.s3.eu-west-1.amazonaws.com' + cover + '.jpg');
 
-        // console.log('file', file);
+        // change cover
+        if (Vars.musicPlaylist) {
+            Vars.musicPlaylist.style.backgroundImage = 'url(https://ncsmusic.s3.eu-west-1.amazonaws.com' + cover + ')';
+        }
+
+        infosMusic += '<p>';
+            infosMusic += '<strong>';
+                infosMusic += name;
+            infosMusic += '</strong>';
+            infosMusic += '<em>';
+                infosMusic += artist;
+            infosMusic += '</em>';
+        infosMusic += '</p>';
+        infosMusic += '<a href="' + download + '" title="Download" class="mDownload" target="_blank">';
+            infosMusic += '<i class="fa-solid fa-copyright"></i>';
+        infosMusic += '</a>';
 
         // ---------------------
         // PLAY MUSIC
@@ -3338,6 +3676,16 @@ Wapp.STG = Wapp.STG || {};
 
                 // PLAY
                 Vars.musicPlayer.pause();
+            }
+        }
+
+        // hide box music player
+        if (Vars.boxMusicPlayer) {
+            if (Vars.boxMusicPlayer.classList.contains('active')) {
+                Vars.boxMusicPlayer.classList.remove('active');
+
+            } else {
+                Vars.boxMusicPlayer.classList.add('active');
             }
         }
 
