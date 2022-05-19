@@ -5,7 +5,7 @@
 // v.00bond (a wizard company)
 // - - - - - - - - - - - - - - - - - - -
 // #wf-202202112257
-// #wf-202205141754
+// #wf-202205182252
 // - - - - - - - - - - - - - - - - - - -
 // WIZARD FLY [adonis vieira]
 // http://wizrdfly.rf.gd
@@ -147,6 +147,18 @@ body.mobile .desk {
     z-index: 1;
     bottom: 0;
     left: -2px;
+}
+
+/* -- coin -- */
+.sprCoin {
+    display: inline-block;
+    background-image: url('../img/spr-coin.png');
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    width: 16px;
+    height: 16px;
+    background-position-x: 0;
+    animation: coin 0.45s 0s steps(8, end) infinite;
 }
 
 /* -- fruits -- */
@@ -1885,7 +1897,6 @@ body.mobile .desk {
     padding: calc(50vh - (224px / 2)) 0;
     /* -DISABLED- */
     /*display: none !important;*/
-    /*backdrop-filter: blur(3px);*/
 }
 
 body.high .startScreen {
@@ -1953,6 +1964,134 @@ body.high .startScreen {
     animation: aniBg 0.6s 0s linear infinite;
 }
 
+/* -- plataform -- */
+.bgPlataform {
+    width: calc(500px - 12px);
+    /* height: calc(100% - 4px); */
+    /* max-height: 324px; */
+    position: absolute;
+    z-index: 1;
+    bottom: 84px;
+    /* display: none; */
+    /* bottom: 23px; */
+    pointer-events: none;
+    left: 0;
+    background: rgb(255 255 255 / 45%);
+    border: 1px solid #ffffff;
+    border-radius: 6px;
+    opacity: 0;
+    transition: opacity 0.6s;
+    padding: 2px 5px 5px 5px;
+    /* overflow:hidden; */
+}
+
+.bgPlataform.active {
+    /* display: block; */
+    opacity: 1;
+    pointer-events: all;
+    /* z-index: 999; */
+}
+
+.bgPlataform:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to top, transparent, #f7452e);
+    z-index: -1;
+    display: block;
+    border-radius: 6px 6px 0 0;
+}
+
+.bgPlataform .title {
+    font-size: 11px;
+    display: block;
+    position: absolute;
+    top: -18px;
+    left: calc(50% - (326px / 2));
+    /* width: calc(100% - 6px); */
+    line-height: 11px;
+    padding: 3px 5px;
+    /* font-weight: 700; */
+    color: #ffffff;
+    background: #f7452e;
+    border-radius: 3px 3px 0 0;
+    border: 1px solid #FFFFFF;
+    border-bottom: 0;
+}
+
+.bgPlataform img {
+    display: block;
+    margin: 0 auto 8px;
+    max-width: 108px;
+}
+
+.bgPlataform .left {
+    width: 55%;
+    text-align: right;
+}
+
+.bgPlataform .left p {
+    /* text-align: right; */
+}
+
+.bgPlataform p {
+    font-size: 12px;
+    display: block;
+    line-height: 14px;
+    text-align: center;
+    color: #000000;
+}
+
+.bgPlataform p strong {
+    font-weight: 700;
+    display: block;
+    margin: 0 0 5px;
+    line-height: 16px;
+    vertical-align: middle;
+}
+
+.bgPlataform p strong i {
+    vertical-align: middle;
+}
+
+.bgPlataform p b {
+    font-weight: 700;
+}
+
+.bgPlataform a.btn {
+    display: inline-block;
+    background: #F7452E;
+    border: 1px solid #F7452E;
+    color: #ffffff;
+    padding: 5px 10px;
+    margin: 5px 0 0;
+    font-size: 11px;
+    line-height: 16px;
+    font-weight: 700;
+    transition: background 0.4s, color 0.4s;
+    border-radius: 3px;
+    width: 120px;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.bgPlataform a.btn:hover, .bgPlataform a.btn:focus {
+    background: #ffffff;
+    color: #F7452E;
+}
+
+.bgPlataform a.btn i {
+    vertical-align: middle;
+}
+
+.bgPlataform .right {
+    width: 44%;
+}
+
 /* -- fruits -- */
 .bgFruits {
     width: 1100px;
@@ -1963,10 +2102,12 @@ body.high .startScreen {
     border: 2px dashed rgb(255 255 255 / 35%);
     /* display: none; */
     opacity: 0;
+    pointer-events: none;
     transition: opacity 0.6s;
 }
 
 .bgFruits.active {
+    pointer-events: all;
     /* display: block; */
     opacity: 1;
 }
@@ -1997,11 +2138,13 @@ body.high .bgFruits .sprFruits01 {
     z-index: 5;
     /* display: none; */
     transition: opacity 0.6s;
+    pointer-events: none;
     opacity: 0;
 }
 
 .bgNuke.active {
     /* display: block; */
+    pointer-events: all;
     opacity: 1;
 }
 
@@ -2077,10 +2220,10 @@ body.high .bgFruits .sprFruits01 {
     bottom: 66px;
     left: calc(50% - (100px / 2));
     z-index: 1;
-    width: 100px;
+    width: 96px;
     border-radius: 50%;
-    border: 2px dashed rgb(255 255 255 / 35%);
-    height: 100px;
+    border: 2px dashed rgb(255 255 255 / 65%);
+    height: 96px;
 }
 
 .bgNuke .barrel .uranium img {
@@ -2121,21 +2264,287 @@ body.high .bgFruits .sprFruits01 {
 
 /* -- cards -- */
 .bgCards {
-    width: 500px;
+    pointer-events: none;
+    width: 460px;
     position: absolute;
-    bottom: 40px;
+    bottom: 122px;
     /*left: 0px;*/
     z-index: 5;
-    /*background: #363636;*/
-    height: 50px;
-    /* display: none; */
     opacity: 0;
     transition: opacity 0.6s;
 }
 
 .bgCards.active {
-    /* display: block; */
     opacity: 1;
+    pointer-events: all;
+}
+
+.bgCards .msgCards {
+    position: absolute;
+    top: 0;
+    left: 83px;
+    z-index: 1;
+    width: 110px;
+    background: rgb(0 121 0 / 70%);
+    border: 1px solid #007f00;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.bgCards .msgCards:before {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    right: -13px;
+    z-index: 1;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 7px solid #007e00;
+    display: block;
+}
+
+.bgCards .msgCards i {
+    float: left;
+    margin: 6px 0 0;
+}
+
+.bgCards .msgCards p {
+    float: right;
+    width: calc(100% - 20px);
+    display: block;
+    color: #FFFFFF;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: left;
+}
+
+.bgCards .msgCards p strong {
+    display: block;
+    color: #FFFF00;
+    font-size: 16px;
+    line-height: 16px;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.bgCards .msgCards p i {
+    float: none;
+    width: auto;
+    margin: 3px 0 0;
+    font-size: 10px;
+    padding: 1.5px;
+}
+
+.bgCards .leftCards {
+    width: calc(100% - 91px);
+    background: url('../img/bg-cards.png') no-repeat top center;
+    height: 120px;
+    position: relative;
+}
+
+.bgCards .leftCards .bCards {
+    width: 78%;
+    position: absolute;
+    left: -17px;
+    top: 75px;
+}
+
+.bgCards .leftCards .bCards .cardsAmount {
+    position: relative;
+}
+
+.bgCards .leftCards .bCards .cardsAmount ul {
+    font-size: 0;
+    width: 100%;
+    /* margin: 0 0 5px; */
+}
+
+.bgCards .leftCards .bCards .cardsAmount ul li {
+    width: 23%;
+    display: inline-block;
+    margin: 0 1%;
+}
+
+.bgCards .leftCards .bCards .cardsAmount ul li a {
+    display: block;
+    /* background-color: #FFFFFF; */
+    font-size: 12px;
+    border-radius: 3px;
+    text-align: center;
+    color: #000000;
+    height: 86px;
+    line-height: 86px;
+    font-weight: 700;
+    overflow: hidden;
+    border: 1px solid #FFFFFF;
+    position: relative;
+}
+
+.bgCards .leftCards .bCards .cardsAmount ul li a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgb(0 0 0 / 0%), rgb(255 255 255 / 20%));
+    display: block;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.bgCards .leftCards .bCards .cardsAmount ul li a.bgCardGreen {
+    background: url('../img/bg-card-green.png') no-repeat center / 100% 100% #FFFFFF;
+}
+
+.bgCards .leftCards .bCards .cardsAmount ul li a.bgCardBlue {
+    background: url('../img/bg-card-blue.png') no-repeat center / 100% 100% #FFFFFF;
+}
+
+.bgCards .leftCards .bCards .cardsAmount .cardsPoints {
+    display: block;
+    text-align: left;
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 12px;
+    position: absolute;
+    top: -21px;
+    left: 35px;
+}
+
+.bgCards .leftCards .bCards .cardsAmount .cardsPoints strong {
+    font-weight: 700;
+    color: #F0423E;
+    line-height: 12px;
+}
+
+.bgCards .leftCards .bCards .cardsAmount .cardsPoints strong b {
+    font-weight: 700;
+    line-height: 12px;
+}
+
+.bgCards .leftCards .bButtons {
+    width: 23%;
+    position: absolute;
+    right: 12px;
+    top: 75px;
+}
+
+.bgCards .leftCards .bButtons ul {
+}
+
+.bgCards .leftCards .bButtons ul li {
+    margin: 0 0 4px;
+    display: block;
+}
+
+.bgCards .leftCards .bButtons ul li a {
+    display: block;
+    background: #363636;
+    font-size: 11px;
+    line-height: 11px;
+    color: #FFFFFF;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5px 0;
+    font-weight: 700;
+    transition: background 0.4s, color 0.4s;
+    border-radius: 3px;
+}
+
+.bgCards .leftCards .bButtons ul li a.cardsBuy {
+    background: #363636;
+    border: 1px solid #363636;
+}
+
+.bgCards .leftCards .bButtons ul li a.cardsBuy:hover, .bgCards .leftCards .bButtons ul li a.cardsBuy:focus {
+    background: #FFFFFF;
+    color: #363636;
+}
+
+.bgCards .leftCards .bButtons ul li a.cardsTrash {
+    background: #F0423E;
+    border: 1px solid #F0423E;
+}
+
+.bgCards .leftCards .bButtons ul li a.cardsTrash:hover, .bgCards .leftCards .bButtons ul li a.cardsTrash:focus {
+    background: #FFFFFF;
+    color: #F0423E;
+}
+
+.bgCards .leftCards .bButtons ul li a b {
+    display: block;
+    font-size: 11px;
+    line-height: 8px;
+    text-transform: lowercase;
+    /* margin: 2px 0 0; */
+}
+
+.bgCards .rightCards {
+    width: 90px;
+    position: absolute;
+    top: 13px;
+    right: 0;
+}
+
+.bgCards .rightCards p {
+    text-align: left;
+}
+
+.bgCards .rightCards p strong {
+    display: block;
+    color: #065F0A;
+    font-size: 19px;
+    line-height: 19px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 2px;
+}
+
+.bgCards .rightCards p strong b {
+    display: block;
+    font-size: 10px;
+    /* text-transform: uppercase; */
+    line-height: 10px;
+    font-weight: 700;
+    color: #FFFF00;
+    margin: 0 0 2px;
+}
+
+.bgCards .rightCards p em {
+    color: #000000;
+    display: block;
+    font-size: 12px;
+    line-height: 12px;
+    margin: 0 0 5px;
+}
+
+.bgCards .rightCards figure {
+    position: relative;
+}
+
+.bgCards .rightCards figure img {
+    /* position: absolute; */
+}
+
+.bgCards .rightCards figure img:first-of-type {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bgCards .rightCards figure img:last-of-type {
+    width: 83px;
+    position: relative;
+    top: 55px;
+    position: absolute;
+    left: -5px;
 }
 
 /* -- backgrounds -- */
@@ -3855,7 +4264,7 @@ body.mobile .game .msg .tips.tip01 p em span.mob {
 /* -- offers03 -- */
 .game .msg .tips.tipOffer01.offers03 {
     left: -5192px;
-    bottom: 50px;
+    bottom: 45px;
     width: 868px;
     height: 149px;
 }
@@ -4883,10 +5292,10 @@ body.high .content .status {
 
 .section.navigation .controlsMob {
     display: block;
-    width: calc(100% - 40px);
+    width: calc(100% - 40px - 4px);
     height: 50px;
     border-radius: 50px;
-    border: 1px dashed rgb(255 255 255 / 25%);
+    border: 2px dashed rgb(255 255 255 / 65%);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -4894,6 +5303,12 @@ body.high .content .status {
     /* line-height: 80px; */
     z-index: 50;
     /* filter: drop-shadow(-4px -2px 1px rgb(0, 0, 0, 35%)); */
+    transition: width 0.4s, border 0.4s;
+}
+
+.section.navigation .controlsMob.active {
+    width: calc(100% - 40px - 2px);
+    border: 1px dashed rgb(255 255 255 / 25%);
 }
 
 .section.navigation .controlsMob .left, .section.navigation .controlsMob .right {
@@ -4905,8 +5320,13 @@ body.high .content .status {
     pointer-events: none;
     font-size: 25px;
     line-height: 50px;
-    opacity: 0.3;
+    opacity: 0.65;
     display: block;
+    transition: opacity 0.4s;
+}
+
+.section.navigation .controlsMob.active i {
+    opacity: 0.3;
 }
 
 .section.navigation .controlsMob .right i {
@@ -5049,7 +5469,7 @@ body.high .section.music {
     border-radius: 3px;
     text-align: center;
     line-height: 17px;
-    margin: 3px 0 0;
+    margin: 3px 0;
 }
 
 .section.music .progressBar:before {
@@ -5083,23 +5503,24 @@ body.high .section.music {
 
 .section.music .playing {
     /* overflow: hidden; */
-    position: relative;
-    /* top: calc(100% + 2px); */
-    /* right: 0; */
-    /* z-index: 1; */
-    width: max-content;
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    z-index: 1;
+    /* width: max-content; */
     /* height: 23px; */
-    background: rgb(255 255 255 / 45%);
-    border: 1px solid rgb(255 255 255 / 35%);
-    overflow: hidden;
-    border-radius: 3px;
-    text-align: center;
-    line-height: 17px;
-    padding: 5px;
+    /* background: rgb(255 255 255 / 45%); */
+    /* border: 1px solid rgb(255 255 255 / 35%); */
+    /* overflow: hidden; */
+    /* border-radius: 3px; */
+    /* text-align: center; */
+    /* line-height: 17px; */
+    /* padding: 5px; */
     float: right;
-    margin: 3px 0 0;
-    background: url(../img/bg-rainbow.png) repeat center / 400%;
-    animation: aniPosition 10s 0s linear infinite;
+    /* margin: 3px 0 0; */
+    /* background: url(../img/bg-rainbow.png) repeat center / 400%; */
+    /* animation: aniPosition 10s 0s linear infinite; */
+    /* display: none; */
 }
 
 .section.music .playing:before {
@@ -5108,10 +5529,10 @@ body.high .section.music {
     z-index: 1;
     width: 100%;
     height: 100%;
-    display: block;
+    display: none;
     top: 0;
     left: 0;
-    background: rgb(255 255 255 / 75%);
+    background: rgb(255 255 255 / 65%);
 }
 
 .section.music .playing p {
@@ -5127,6 +5548,7 @@ body.high .section.music {
     text-align: left;
     margin: 0 5px 0 0;
     display: inline-block;
+    display: none;
     text-align: right;
 }
 
@@ -5148,11 +5570,11 @@ body.high .section.music {
 .section.music .playing a {
     /* float: left; */
     display: inline-block;
-    color: #363636;
+    color: #5c595c;
     /* margin: 0 0 0 2.5px; */
-    /* height: 22px; */
-    font-size: 19px;
-    vertical-align: middle;
+    height: 30px;
+    font-size: 21px;
+    transform: rotate(-35deg);
     position: relative;
     z-index: 2;
 }
@@ -5241,7 +5663,7 @@ body.high .section.music {
 
 .section.music ul.playlist {
     position: absolute;
-    top: 85px;
+    top: 48px;
     right: -250px;
     z-index: 2;
     border: 1px solid rgb(255 255 255 / 35%);
@@ -5250,13 +5672,14 @@ body.high .section.music {
     padding: 0;
     background: rgb(255 255 255 / 35%);
     transition: right 0.4s;
-    /* background: url(../img/bg-rainbow.png) repeat center / 400%; */
-    /* animation: aniPosition 10s 0s linear infinite; */
+    background: url(../img/bg-rainbow.png) repeat center / 400%;
+    animation: aniPosition 10s 0s linear infinite;
     height: 134px;
+    height: calc(100vh - 68px);
     overflow: auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
+    /* background-repeat: no-repeat; */
+    /* background-position: center; */
+    /* background-size: 100% 100%; */
 }
 
 .section.music.active ul.playlist {
@@ -5268,10 +5691,11 @@ body.high .section.music {
     position: relative;
     width: 100%;
     float: left;
-    border-bottom: 1px solid rgb(255 255 255 / 35%);
-    background: rgb(255 255 255 / 45%);
+    margin: 0 0 1px;
+    /* border-bottom: 1px solid rgb(255 255 255 / 35%); */
+    background: rgb(255 255 255 / 65%);
     padding: 5px 0;
-    margin: 0;
+    /* margin: 0; */
     display: block;
     /*backdrop-filter: blur(3px);*/
 }
@@ -5294,13 +5718,13 @@ body.high .section.music {
 
 .section.music ul.playlist li p {
     float: left;
-    color: #000000;
+    color: #363636;
     /*width: calc(100% - 55px);*/
-    width: calc(100% - 30px);
+    width: calc(98% - 30px);
     overflow: hidden;
     height: 23px;
     /* text-align: left; */
-    margin: 0 5px 0 0;
+    margin: 0 5px 0 2px;
     transition: color 0.4s;
     /* text-shadow: 1px 1px 0 #000000; */
 }
@@ -5309,21 +5733,27 @@ body.high .section.music {
     font-size: 11px;
     line-height: 11px;
     font-weight: 700;
+    height: 11px;
+    overflow: hidden;
     display: block;
+    /* width: 98%; */
 }
 
 .section.music ul.playlist li p em {
     font-size: 11px;
     line-height: 11px;
+    overflow: hidden;
     display: block;
     text-transform: lowercase;
+    height: 11px;
 }
 
 .section.music ul.playlist li a {
     float: left;
     display: block;
-    color: #363636;
+    color: #5c595c;
     margin: 0 5px 0 0;
+    width: 22px;
 }
 
 .section.music ul.playlist li a:first-of-type {
@@ -6011,6 +6441,16 @@ body.high .section.music {
 
     100% {
         background-position-x: -135px;
+    }
+}
+
+@keyframes coin {
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: -128px;
     }
 }
 

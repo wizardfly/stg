@@ -5,7 +5,7 @@
 // v.00bond (a wizard company)
 // - - - - - - - - - - - - - - - - - - -
 // #wf-202202112257
-// #wf-202205141754
+// #wf-202205182252
 // - - - - - - - - - - - - - - - - - - -
 // WIZARD FLY [adonis vieira]
 // http://wizrdfly.rf.gd
@@ -38,7 +38,7 @@ Wapp.STG = Wapp.STG || {};
         // :: music progress ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         musicBar            : doc.querySelectorAll('.section.music .progressBar .seekbar')[0],
         // :: music cover :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-        musicCover          : doc.querySelectorAll('.section.music .mCover')[0],
+        // musicCover          : doc.querySelectorAll('.section.music .mCover')[0],
         // :: music button play :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         // musicPlay           : doc.querySelectorAll('.section.music ul.playlist li a.mPlay'),
         // :: music button pause ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -69,6 +69,8 @@ Wapp.STG = Wapp.STG || {};
         boxCards            : doc.querySelectorAll('.game .bgCards')[0],
         // :: box fruits ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         boxFruit            : doc.querySelectorAll('.game .bgFruits')[0],
+        // :: box plataform :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        boxPlataform        : doc.querySelectorAll('.game .bgPlataform')[0],
         // :: button create fruit :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         btnFruit            : doc.querySelectorAll('.controls .btnCreateFruit')[0],
         // :: images all fruits :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -384,6 +386,8 @@ Wapp.STG = Wapp.STG || {};
         fruitsBg            : false,
         // :: box cards bg ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         cardsBg             : false,
+        // :: box plataform bg ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        plataformBg         : false,
         // :: box store :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         boxMsg              : doc.querySelectorAll('.boxGame .bgStore')[0],
         // :: box message :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -927,6 +931,48 @@ Wapp.STG = Wapp.STG || {};
         // ---------------------------------------
         // Wapp.STG.VerifyCode(e, e.keyCode);
         console.log('DISABLED > Wapp.STG.VerifyCode');
+
+        ////////////////////////////
+        // GAMEPAD /////////////////
+        ////////////////////////////
+        /*
+        var
+            // gamepad = [],
+            control = '',
+            checkGamepad = function (e) {
+                // console.log('e', e);
+
+                for (control of navigator.getGamepads()){
+                    //console.log('gamepads', gamepad);
+
+                    if (control) {
+                        // gamepad[control.index] = control;
+                        // console.log('gamepad connected', gamepad[control.index]);
+                        console.log('gamepad connected', control);
+
+                        // checkButtons(gamepad[control.index]);
+                        checkButtons(control.index);
+                    }
+                }
+            },
+            loopButtons = '',
+            checkButtons = function (index) {
+                // console.log('control', navigator.getGamepads()[index]);
+                loopButtons = setInterval(function (pos) {
+                    [].forEach.call(navigator.getGamepads()[pos].buttons, function (btn, i) {
+                        // console.log('btn', btn);
+
+                        if ((btn.pressed !== false) || (btn.touched !== false) || (btn.value !== 0)) {
+                            console.log('btn', btn);
+                            console.log('btn index', i);
+                        }
+                    });
+                }, 100, index);
+            };
+
+        window.addEventListener('gamepadconnected', checkGamepad, true);
+        */
+        ////////////////////////////
     };
 
     /* add one or more events */
@@ -989,6 +1035,11 @@ Wapp.STG = Wapp.STG || {};
             // console.log('e.touches[0]', e.touches[0]);
             // console.log('e.touches[0].clientX FIRST', e.touches[0].clientX);
             // console.log('e.touches[0].clientY', e.touches[0].clientY);
+
+            // disabled TIP
+            if (!Vars.controlsMob.classList.contains('active')) {
+                Vars.controlsMob.classList.add('active');
+            }
 
             Vars.posTouchStart = e.touches[0].clientX;
 
@@ -1659,6 +1710,14 @@ Wapp.STG = Wapp.STG || {};
                         Vars.fruitsBg = false;
                     }
 
+                    // --------------------
+                    // ENABLE BOX PLATAFORM
+                    // --------------------
+                    if (pos <= -340) {
+                        // console.log('enabled BOXPLATAFORM');
+                        Vars.plataformBg = true;
+                    }
+
                     // ----------------
                     // ENABLE BOX CARDS
                     // ----------------
@@ -1693,6 +1752,9 @@ Wapp.STG = Wapp.STG || {};
 
                 // enabled fruits background [move]
                 Wapp.STG.FruitBg(e, direction);
+
+                // enabled plataform background [move]
+                Wapp.STG.PlataformBg(e, direction);
 
                 // enabled nuke background [move]
                 Wapp.STG.NukeBg(e, direction);
@@ -2122,6 +2184,127 @@ Wapp.STG = Wapp.STG || {};
                     // ------------------------
                     */
                     // -------------------------------------------------------------
+                }
+            }
+
+            // Vars.msgBg = false;
+
+        // hide box fruit
+        } else {
+            if (Vars.boxFruit) {
+                Vars.boxFruit.classList.remove('active');
+            }
+        }
+    };
+
+
+    /* enabled box plataform background [move] */
+    Wapp.STG.PlataformBg = function (e, direction) {
+        // console.log(':: PlataformBg [fnc]');
+
+        var
+            compStyles = '',
+            pos = '',
+            newPos = '';
+            // boxRect = '',
+            // boxSize = '',
+            // winSize = '',
+            // marginColision = 40;
+
+        if (Vars.plataformBg === true) {
+            // console.log('enable fruit bg');
+
+            // show box fruit
+            if (Vars.boxPlataform) {
+                // show message
+                if (!Vars.boxPlataform.classList.contains('active')) {
+                    Vars.boxPlataform.classList.add('active');
+
+                    if (direction === 'right') {
+                        // Vars.boxFruit.style.left = win.innerWidth + 'px';
+
+                        var boxRect2 = Vars.boxPlataform.getBoundingClientRect();
+
+                        if (boxRect2.left === 0) {
+                            // ############################
+                            // ----------------------------
+                            // CALC FOR SET POSITION in BOX
+                            // edit this test logic!!!
+                            // ----------------------------
+                            // ############################
+                            // var boxRect2 = Vars.boxFruit.getBoundingClientRect();
+                            // console.log('boxRect2.width', boxRect2.width);
+                            // console.log('boxRect2.left', boxRect2.left);
+
+                            // var winSize2 = parseFloat(win.innerWidth / 2);
+                            // console.log('winSize2', winSize2);
+
+                            // var boxSize2 = parseFloat((boxRect2.width / 2) + boxRect2.left);
+                            // console.log('boxSize2', boxSize2);
+
+                            var x = (boxRect2.left - (- win.innerWidth / 2));
+                            // console.log('x', x);
+
+                            var nX = (x + (boxRect2.width / 4));
+                            // console.log('nX', nX);
+
+                            // var nBox = doc.querySelectorAll('.boxGame .bgStore')[0].style.left = nX + 'px';
+                            // console.log('nBox', nBox);
+
+                            Vars.boxPlataform.style.left = nX + 'px';
+                            // ----------------------------
+                            // ############################
+                        }
+                    }
+
+                    /*
+                    // animate mail
+                    if (Vars.boxMsgMail) {
+                        Vars.boxMsgMail.classList.add('active');
+                    }
+
+                    // show message text
+                    // if (Vars.boxMsgText) {
+                    //     Vars.boxMsgText.classList.add('active');
+                    // }
+                    */
+
+                // animate move message
+                } else {
+                    compStyles = win.getComputedStyle(Vars.boxPlataform);
+                    // console.log('compStyles', compStyles);
+                    // console.log('getPropertyValue', compStyles.getPropertyValue('left'));
+
+                    // new positions parallax
+                    // newPos = 0.5;
+                    // ------------------------------------------------
+                    // SYNC with LAST BG [last bg = first img position]
+                    // bg terrain
+                    // ------------------------------------------------
+                    // newPos = parseFloat((Vars.bg.length - 1) * 0.5);
+                    newPos = parseFloat((Vars.bg.length - 1) * Vars.mSpeed);
+                    // ------------------------------------------------
+
+                    // verify position
+                    if (compStyles.getPropertyValue('left') === '') {
+                        // console.log('not position, ZERO');
+                        pos = 0;
+
+                    } else {
+                        // console.log('position, INCREMENT');
+                        pos = parseFloat(compStyles.getPropertyValue('left').replace('px', ''));
+                    }
+
+                    if (direction === 'left') {
+                        // console.log('move LEFT');
+                        pos += newPos;
+
+                    } else if (direction === 'right') {
+                        // console.log('move RIGHT');
+                        pos -= newPos;
+                    }
+
+                    Vars.boxPlataform.style.left = pos + 'px';
                 }
             }
 
@@ -3566,9 +3749,10 @@ Wapp.STG = Wapp.STG || {};
         // console.log('cover', 'https://ncsmusic.s3.eu-west-1.amazonaws.com' + cover + '.jpg');
 
         // change cover
-        if (Vars.musicPlaylist) {
-            Vars.musicPlaylist.style.backgroundImage = 'url(https://ncsmusic.s3.eu-west-1.amazonaws.com' + cover + ')';
-        }
+        // if (Vars.musicPlaylist) {
+        //     Vars.musicPlaylist.style.backgroundImage = 'url(https://ncsmusic.s3.eu-west-1.amazonaws.com' + cover + ')';
+        // }
+        console.log('DISABLED > coverMusic');
 
         infosMusic += '<p>';
             infosMusic += '<strong>';
@@ -3579,7 +3763,8 @@ Wapp.STG = Wapp.STG || {};
             infosMusic += '</em>';
         infosMusic += '</p>';
         infosMusic += '<a href="' + download + '" title="Download" class="mDownload" target="_blank">';
-            infosMusic += '<i class="fa-solid fa-copyright"></i>';
+            // infosMusic += '<i class="fa-solid fa-copyright"></i>';
+            infosMusic += '<i class="fa-solid fa-headphones"></i>';
         infosMusic += '</a>';
 
         // ---------------------

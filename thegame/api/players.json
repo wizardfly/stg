@@ -1,0 +1,194 @@
+[
+	{
+		"id" : "U64aQrxTxrob625729b6e7d69",
+		"skin" : "alien01 sprAlien01 idle",
+		"name" : "Dude Monster",
+		"description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"value" : "0",
+		"details" : {
+			"rarity" : "15",
+			"size" : "15",
+			"speed" : "15"
+		}
+	},
+	{
+		"id" : "u4B7GWDqFSPl625729ba42f37",
+		"skin" : "smDragon01 sprSmDragon01 idle",
+		"name" : "Small Dragon",
+		"description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"value" : "0",
+		"details" : {
+			"rarity" : "18",
+			"size" : "25",
+			"speed" : "15"
+		}
+	},
+	{
+		"id" : "CgGHddJSVkE0625729db20d07",
+		"skin" : "demon01 sprDemon01 idle",
+		"name" : "Chinelk Rosin",
+		"description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"value" : "0",
+		"details" : {
+			"rarity" : "15",
+			"size" : "20",
+			"speed" : "25"
+		}
+	},
+	{
+		"id" : "WjdsHkolvspM625729fbe1c84",
+		"skin" : "hyena01 sprHyena01 idle",
+		"name" : "Shenzi Scar",
+		"description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"value" : "0",
+		"details" : {
+			"rarity" : "15",
+			"size" : "20",
+			"speed" : "25"
+		}
+	},
+	{
+		"id" : "Vh0jAXj0XqeP62572a030d844",
+		"skin" : "snake01 sprSnake01 idle",
+		"name" : "Twin Snkes",
+		"description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"value" : "0",
+		"details" : {
+			"rarity" : "15",
+			"size" : "20",
+			"speed" : "25"
+		}
+	},
+	{
+		"id" : "90mn0R5s7AdA62572a3294f93",
+		"skin" : "dog01 sprDog01 idle",
+		"name" : "Dobe Doggy",
+		"description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"value" : "0",
+		"details" : {
+			"rarity" : "15",
+			"size" : "20",
+			"speed" : "25"
+		}
+	},
+	{
+		"id" : "Z1pkRnDm7MLr62572a38ba664",
+		"skin" : "dog02 sprDog02 idle",
+		"name" : "Shiba Inu",
+		"description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"value" : "0",
+		"details" : {
+			"rarity" : "15",
+			"size" : "20",
+			"speed" : "25"
+		}
+	},
+	{
+		"id" : "WGb4W8zgyfEC62572a3f54ff3",
+		"skin" : "cat01 sprCat01 idle",
+		"name" : "Persa Catch",
+		"description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"value" : "0",
+		"details" : {
+			"rarity" : "15",
+			"size" : "20",
+			"speed" : "25"
+		}
+	},
+	{
+		"id" : "y9IgSrUIxixW62572a4583881",
+		"skin" : "bird01 sprBird01 idle",
+		"name" : "Asa Branca",
+		"description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"value" : "0",
+		"details" : {
+			"rarity" : "15",
+			"size" : "20",
+			"speed" : "25"
+		}
+	},
+	{
+		"id" : "8v0s3B7u9Yxy62572a4b321d5",
+		"skin" : "bird02 sprBird02 idle",
+		"name" : "Corvus Corax",
+		"description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"value" : "0",
+		"details" : {
+			"rarity" : "15",
+			"size" : "20",
+			"speed" : "25"
+		}
+	},
+	{
+		"id" : "NWbwUXHVvaQz62572a516fffe",
+		"skin" : "vulture01 sprVulture01 idle",
+		"name" : "Buzz Buzzard",
+		"description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"value" : "0",
+		"details" : {
+			"rarity" : "15",
+			"size" : "20",
+			"speed" : "25"
+		}
+	},
+	{
+		"id" : "TPzYeiih9ERj62572a573fda4",
+		"skin" : "alien02 sprAlien02 idle",
+		"name" : "Owlet Monster",
+		"description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"value" : "0",
+		"details" : {
+			"rarity" : "15",
+			"size" : "20",
+			"speed" : "25"
+		}
+	},
+	{
+		"id" : "jFImjPym7Xhz62572a5d2d8f8",
+		"skin" : "alien03 sprAlien03 idle",
+		"name" : "Pink Monster",
+		"description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"value" : "0",
+		"details" : {
+			"rarity" : "15",
+			"size" : "20",
+			"speed" : "25"
+		}
+	},
+	{
+		"id" : "84uuqx2F241Z62572a646df51",
+		"skin" : "iori01 sprIori01 idle",
+		"name" : "Iori Yagami",
+		"description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"value" : "0",
+		"details" : {
+			"rarity" : "15",
+			"size" : "20",
+			"speed" : "25"
+		}
+	},
+	{
+		"id" : "Sm9FBZ1NbK7M62572a6f2439f",
+		"skin" : "darkHorseman01 sprDarkHorseman01 idle",
+		"name" : "Dark Horseman",
+		"description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"value" : "0",
+		"details" : {
+			"rarity" : "15",
+			"size" : "20",
+			"speed" : "25"
+		}
+	},
+	{
+		"id" : "QbtyZ3znewwy62572a750d5be",
+		"skin" : "maiShiranui01 sprMaiShiranui01 idle",
+		"name" : "Mai Shiranui",
+		"description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"value" : "0",
+		"details" : {
+			"rarity" : "15",
+			"size" : "20",
+			"speed" : "25"
+		}
+	}
+]
