@@ -5,7 +5,7 @@
 // v.00bond (a wizard company)
 // - - - - - - - - - - - - - - - - - - -
 // #wf-202202112257
-// #wf-202205182252
+// #wf-202205232314
 // - - - - - - - - - - - - - - - - - - -
 // WIZARD FLY [adonis vieira]
 // http://wizrdfly.rf.gd
@@ -29,8 +29,12 @@ Wapp.STG = Wapp.STG || {};
 
     /* private Vars */
     Vars = {
+        // :: select language :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        slcLanguage         : doc.querySelectorAll('.slcLanguage')[0],
         // :: select quality ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         inpEffects          : doc.querySelectorAll('input[name="effects"]'),
+        // :: select cursor :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        inpCursor           : doc.querySelectorAll('input[name="cursor"]'),
         // :: box music player ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         boxMusicPlayer      : doc.querySelectorAll('.section.music')[0],
         // :: music player ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -320,6 +324,7 @@ Wapp.STG = Wapp.STG || {};
         death               : doc.querySelectorAll('.game .sprDeath')[0],
         // :: player skins ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         skins               : [
+            'dog01 sprDog01 idle',
             'dog02 sprDog02 idle',
             'alien01 sprAlien01 idle',
             // -----
@@ -327,7 +332,7 @@ Wapp.STG = Wapp.STG || {};
             'demon01 sprDemon01 idle',
             'hyena01 sprHyena01 idle',
             'snake01 sprSnake01 idle',
-            'dog01 sprDog01 idle',
+            // 'dog01 sprDog01 idle',
             // -----
             // 'dog02 sprDog02 idle',
             // -----
@@ -346,6 +351,7 @@ Wapp.STG = Wapp.STG || {};
         skinsSelected       : 0,
         // :: player name :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         names               : [
+            'Dobe Doggy',
             'Shelba Inu',
             'Dude Monster',
             // -----
@@ -353,7 +359,7 @@ Wapp.STG = Wapp.STG || {};
             'Chinelk Rosin',
             'Shenzi Scar ',
             'Twin Snkes',
-            'Dobe Doggy',
+            // 'Dobe Doggy',
             // -----
             // 'Shiba Inu',
             // -----
@@ -457,6 +463,19 @@ Wapp.STG = Wapp.STG || {};
         firstEvent          : true,
         // :: backgrounds :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         backgrounds         : {
+            'bg-nature-florest' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-04-01.png',
+                'bg-05.png',
+                'bg-06.png',
+                'bg-06-01.png',
+                'bg-07.png',
+                'bg-08.png',
+                'bg-09.png',
+            ],
             'bg-summer-1' : [
                 'bg-01.png',
                 'bg-02.png',
@@ -653,6 +672,7 @@ Wapp.STG = Wapp.STG || {};
         },
         // :: position terrain ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         posTerrain          : {
+            'bg-nature-florest' : '35px',
             'bg-summer-1' : '40px',
             'bg-cartoon-platformer-2' : '50px',
             // -----
@@ -867,6 +887,12 @@ Wapp.STG = Wapp.STG || {};
 
         // :: select quality
         Wapp.STG.AddEvents('change', Vars.inpEffects, Wapp.STG.ChangeQuality, true);
+
+        // :: select cursor
+        Wapp.STG.AddEvents('change', Vars.inpCursor, Wapp.STG.ChangeCursor, true);
+
+        // :: select language [translate]
+        (Vars.slcLanguage) ? Vars.slcLanguage.addEventListener('change', Wapp.STG.ChangeLanguage, true) : '';
 
         /*
         // :: navigation controls
@@ -3407,6 +3433,9 @@ Wapp.STG = Wapp.STG || {};
 
             html += '<li>';
                 html += '<p>';
+                    html += '<b>';
+                        html += music.genre;
+                    html += '</b>';
                     html += '<strong>';
                         html += music.track;
                     html += '</strong>';
@@ -3414,7 +3443,24 @@ Wapp.STG = Wapp.STG || {};
                         html += music.artist;
                     html += '</em>';
                 html += '</p>';
-                html += '<a href="#" title="Play" class="mPlay" data-file="' + music.url + '" data-name="' + music.track + '" data-artist="' + music.artist + '" data-cover="' + music.cover + '" data-download="https://ncs.io/music-search?q=' + encodeURI(music.track) + '">';
+
+                // --------------------
+                // other providers host
+                // --------------------
+                // DRIVE
+                // --------------------
+                if (music.host) {
+                    if (music.host === 'drive') {
+                        html += '<a href="#" title="Play" class="mPlay" data-file="' + music.url + '" data-name="' + music.track + '" data-artist="' + music.artist + '" data-cover="' + music.cover + '" data-download="' + music.track + '" data-host="' + music.host + '">';
+                    }
+
+                // --------------------
+                // NCS [default]
+                // --------------------
+                } else {
+                    html += '<a href="#" title="Play" class="mPlay" data-file="' + music.url + '" data-name="' + music.track + '" data-artist="' + music.artist + '" data-cover="' + music.cover + '" data-download="https://ncs.io/music-search?q=' + encodeURI(music.track) + '">';
+                }
+
                     html += '<i class="fa-solid fa-circle-play"></i>';
                 html += '</a>';
             html += '</li>';
@@ -3742,8 +3788,9 @@ Wapp.STG = Wapp.STG || {};
             file = e.target.dataset.file,
             name = e.target.dataset.name,
             artist = e.target.dataset.artist,
-            cover = e.target.dataset.cover,
+            // cover = e.target.dataset.cover,
             download = e.target.dataset.download,
+            host = e.target.dataset.host,
             infosMusic = '';
 
         // console.log('cover', 'https://ncsmusic.s3.eu-west-1.amazonaws.com' + cover + '.jpg');
@@ -3808,8 +3855,25 @@ Wapp.STG = Wapp.STG || {};
 
             if (file) {
                 if (Vars.musicPlayer) {
-                    // SET FILE
-                    Vars.musicPlayer.src = 'https://ncsmusic.s3.eu-west-1.amazonaws.com' + file + '.mp3';
+
+                    // --------------------
+                    // other providers host
+                    // --------------------
+                    // DRIVE
+                    // --------------------
+                    if (host) {
+                        if (host === 'drive') {
+                            // SET FILE
+                            Vars.musicPlayer.src = file;
+                        }
+
+                    // --------------------
+                    // NCS [default]
+                    // --------------------
+                    } else {
+                        // SET FILE
+                        Vars.musicPlayer.src = 'https://ncsmusic.s3.eu-west-1.amazonaws.com' + file + '.mp3';
+                    }
 
                     // LOAD
                     Vars.musicPlayer.load();
@@ -3934,6 +3998,104 @@ Wapp.STG = Wapp.STG || {};
         } else if (e.target.value === 'no') {
             doc.body.classList.remove('high');
         }
+
+        e.preventDefault();
+        return false;
+    };
+
+    /* change cursor style */
+    Wapp.STG.ChangeCursor = function (e) {
+        // console.log(':: ChangeCursor [fnc]');
+
+        // reset cursors
+        doc.body.classList.remove('curWhite');
+        doc.body.classList.remove('curBlack');
+        doc.body.classList.remove('curBlue');
+
+        // set cursors
+        if (e.target.value === 'curWhite') {
+            doc.body.classList.add('curWhite');
+
+        } else if (e.target.value === 'curBlack') {
+            doc.body.classList.add('curBlack');
+
+        } else if (e.target.value === 'curBlue') {
+            doc.body.classList.add('curBlue');
+        }
+
+        e.preventDefault();
+        return false;
+    };
+
+    /* change language */
+    Wapp.STG.ChangeLanguage = function (e) {
+        console.log(':: ChangeLanguage [fnc]');
+        console.log('>> in development');
+
+        // s
+        // Free and Open Source Machine Translation API
+        // https://libretranslate.com/
+
+        // var
+        //     res = await fetch("https://libretranslate.de/translate", {
+        //         method: "POST",
+        //         body: JSON.stringify({
+        //             //q: "<div class=\"noChange\">hi brow</div> ",
+        //             q: doc.body.innerHTML,
+        //             source: "en",
+        //             target: e.target.value,
+        //             format: "html"
+        //         }),
+        //         headers: {
+        //             "Content-Type": "application/json"
+        //         }
+        //     });
+
+        /*
+        var
+            ajax = new XMLHttpRequest(),
+            //box = doc.createElement('DIV'),
+            html = doc.querySelectorAll('.section.startScreen')[0].outerHTML,
+            data = {
+                // q: "<div class=\"noChange\">hi brow</div>",
+                q: html,
+                source: "en",
+                target: e.target.value,
+                format: "html"
+            };
+
+        console.log('html', html);
+
+        // box.innerHTML = html;
+        // console.log('box', box);
+
+        // return false;
+
+        // AJAX
+        ajax.open('POST', 'https://libretranslate.de/translate', true);
+        ajax.setRequestHeader('Content-Type', 'application/json');
+        ajax.send(JSON.stringify(data));
+
+        ajax.onreadystatechange = function () {
+            if (ajax.readyState === 4) {
+                if (ajax.status === 200){
+                    // SUCCESS
+                    // console.log('AJAX - SEND Successfully!',  ajax.responseText);
+                    console.log('AJAX - SEND Successfully!',  JSON.parse(ajax.responseText).translatedText);
+
+                    // Wapp.STG.PopulatePlaylist(e, ajax.responseText, 'SUCCESS');
+
+                } else {
+                    // ERROR
+                    console.log('AJAX - SEND Error!',  ajax.returnText);
+
+                    // Wapp.STG.PopulatePlaylist(e, ajax.responseText, 'ERROR');
+                }
+            }
+        };
+
+        // console.log(await res.json());
+        */
 
         e.preventDefault();
         return false;

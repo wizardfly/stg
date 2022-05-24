@@ -1,5 +1,64 @@
 [
     {
+        "url": "https://drive.google.com/uc?authuser=0&id=19nayNhFPSZcmNPHMhGjRimjjnDqeNIpG&export=download",
+        "artist": "McCaf",
+        "track": "Ckay - Emiliana Remix",
+        "cover": "",
+        "genre": "Afrobeats",
+        "host": "drive",
+        "featured": "true",
+        "download": "https://www.youtube.com/watch?v=p3IgkVX7z3U"
+    },
+    {
+        "url": "/tracks/000/000/287/mortals-feat-laura-brehm-1586948736-3e1Snmxk7T",
+        "artist": "Warriyo, Laura Brehm",
+        "track": "Mortals (feat. Laura Brehm)",
+        "cover": "/tracks/000/000/287/100x100/mortals-feat-laura-brehm-1586948734-yFnA6l5Geq.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "/tracks/000/000/648/olympus-1586958851-jjGqDazcY1",
+        "artist": "32Stitches",
+        "track": "Olympus",
+        "cover": "/tracks/000/000/648/100x100/olympus-1586958846-PcWtp2nnhk.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "/tracks/000/000/365/elysium-1586950888-8l3Jv9SFmR",
+        "artist": "Lostboy, Slashtaq",
+        "track": "Elysium",
+        "cover": "/tracks/000/000/365/100x100/elysium-1586950876-OMuLX8kICX.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "/tracks/000/000/668/how-do-you-know-1586959253-pvN9RY1tfa",
+        "artist": "Arlow",
+        "track": "How Do You Know",
+        "cover": "/tracks/000/000/668/100x100/how-do-you-know-1586959249-7hSa4arVWv.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "/tracks/000/000/662/i-miss-you-1586959131-2VJuni81r6",
+        "artist": "Coopex",
+        "track": "I Miss You",
+        "cover": "/tracks/000/000/662/100x100/i-miss-you-1586959126-dUpZqUeYc1.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "/tracks/000/000/661/about-you-1586959114-JPJUURoYiX",
+        "artist": "Ascence",
+        "track": "About You",
+        "cover": "/tracks/000/000/661/100x100/about-you-1586959110-vRNRM8uqct.jpg",
+        "genre": "Trap"
+    },
+    {
+        "url": "/tracks/000/000/651/devil-1586958887-vAYVJsAwiN",
+        "artist": "Barren Gates",
+        "track": "Devil",
+        "cover": "/tracks/000/000/651/100x100/devil-1586958883-oHwiA2yfdj.jpg",
+        "genre": "Trap"
+    },
+    {
         "url": "/tracks/000/000/720/how-we-do-it-ft-marvin-divine-1586961185-sapnkYewDw",
         "artist": "Hoober, Axol",
         "track": "How We Do It",

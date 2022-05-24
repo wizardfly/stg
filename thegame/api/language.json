@@ -1,0 +1,12 @@
+[
+    {
+        "pt": {
+            "txtBox01": "tradução",
+            "txtBox02": "tradução 02"
+        },
+        "en": {
+            "txtBox01": "translate",
+            "txtBox02": "translate 02"
+        }
+    }
+]

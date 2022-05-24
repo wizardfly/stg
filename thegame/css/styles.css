@@ -5,7 +5,7 @@
 // v.00bond (a wizard company)
 // - - - - - - - - - - - - - - - - - - -
 // #wf-202202112257
-// #wf-202205182252
+// #wf-202205232314
 // - - - - - - - - - - - - - - - - - - -
 // WIZARD FLY [adonis vieira]
 // http://wizrdfly.rf.gd
@@ -41,6 +41,19 @@ body {
     height: 100vh;
     overflow: hidden;
     width: 100vw;
+}
+
+/* -- cursor -- */
+body.curWhite, body.curWhite * {
+    cursor: url('../img/cursor-white.cur'), auto;
+}
+
+body.curBlack, body.curBlack * {
+    cursor: url('../img/cursor-black.cur'), auto;
+}
+
+body.curBlue, body.curBlue * {
+    cursor: url('../img/cursor-blue.cur'), auto;
 }
 
 .grid {
@@ -146,7 +159,8 @@ body.mobile .desk {
     position: absolute;
     z-index: 1;
     bottom: 0;
-    left: -2px;
+    /*left: -2px;*/
+    left: -10px;
 }
 
 /* -- coin -- */
@@ -1909,40 +1923,10 @@ body.high .startScreen {
 
 .startScreen img {
     display: block;
-    margin: 0 auto;
-    position: relative;
-    left: -3px;
-    width: 115px;
-}
-
-.startScreen p {
-    display: block;
-    text-align: center;
-    margin: 0 0 20px;
-    z-index: 1;
-    position: relative;
-    /*text-shadow: 1px 1px 1px #363636;*/
-    color: #ffffff;
-}
-
-.startScreen p strong {
-    display: block;
-    font-size: 65px;
-    line-height: 65px;
-    margin: -60px 0 0;
-    font-family: 'Bungee', cursive;
-}
-
-.startScreen p em {
-    display: block;
-    font-style: normal;
-    text-transform: uppercase;
-    font-size: 25px;
-    line-height: 25px;
-    font-family: 'Bungee', cursive;
-    color: #16ebbd;
-    color: #34cace;
-    /* color: #14919a; */
+    margin: 0 auto 10px;
+    /* position: relative; */
+    /* left: -3px; */
+    /* width: 115px; */
 }
 
 .startScreen a {
@@ -2132,7 +2116,8 @@ body.high .bgFruits .sprFruits01 {
 .bgNuke {
     width: 400px;
     position: absolute;
-    bottom: 40px;
+    /*bottom: 40px;*/
+    bottom: 30px;
     /*left: 25px;*/
     left: -400px;
     z-index: 5;
@@ -2893,7 +2878,7 @@ body.high .bg.blur {
     padding: 3px 5px;
     display: inline-block;
     vertical-align: unset;
-    margin: 0;
+    /* margin: 0; */
 }
 
 .section.modals .modal .box .list ul {
@@ -3731,7 +3716,8 @@ body.high .game .player.walk {
     /* display: none; */
     position: absolute;
     left: -300px;
-    bottom: -45px;
+    /*bottom: -45px;*/
+    bottom: -60px;
     z-index: 10;
     opacity: 0;
     width: 300px;
@@ -3889,7 +3875,8 @@ body.high .game .player.walk {
     text-transform: uppercase;
     position: absolute;
     left: calc(45vw - (58px / 2));
-    bottom: 40px;
+    /*bottom: 40px;*/
+    bottom: 31px;
     line-height: 11px;
     text-align: center;
     width: 40px;
@@ -4272,7 +4259,7 @@ body.mobile .game .msg .tips.tip01 p em span.mob {
 .game .msg .tips.tipOffer01.offers03 .brand {
     position: absolute;
     top: -16px;
-    left: calc(50% - (178px / 2));
+    left: calc(50% - (144px / 2));
     z-index: 1;
     /* width: 100%; */
     background: #FFFFFF;
@@ -4574,16 +4561,18 @@ i.development {
     background: #189b97;
     color: #FFFFFF !important;
     position: relative !important;
-    /* font-size: 10px; */
+    font-size: 10px !important;
     transform: unset !important;
     display: block;
-    /* line-height: 10px; */
-    /* font-weight: 700; */
+    line-height: 10px !important;
+    /* font-weight: 700 !important; */
     margin: 5px 0 0;
     top: unset !important;
     left: unset !important;
     right: unset !important;
+    text-transform: uppercase;
     text-align: center;
+    font-family: 'Arial';
 }
 
 /* -- death -- */
@@ -5010,6 +4999,59 @@ body.high .content .status {
     height: 23px;
 }
 
+.content .status .amounts li.btnDonate {
+    /*display: none;*/
+    /* border: 1px solid rgb(255 255 255 / 20%); */
+    /* margin: 2.5px; */
+    width: max-content;
+    /* border-radius: 4px; */
+    /* overflow: hidden; */
+    text-align: center;
+    /* position: absolute; */
+    /* top: -93px; */
+    /* left: 55px; */
+    position: absolute;
+    top: 94px;
+    left: 0;
+    background: rgb(255 255 255 / 15%);
+    border: 1px solid rgb(255 255 255 / 35%);
+    border-radius: 3px;
+    /* text-shadow: unset; */
+    padding: 0;
+}
+
+.content .status .amounts li.btnDonate a {
+    display: block;
+    color: #ffffff;
+    transition: color 0.4s, background 0.4s;
+    padding: 0 5px;
+    /*text-shadow: none;*/
+    background: rgb(255 255 255 / 15%);
+    vertical-align: middle;
+    font-size: 0;
+}
+
+.content .status .amounts li.btnDonate a:hover, .content .status .amounts li.btnDonate a:focus {
+    color: #292330;
+    background: #FFFFFF;
+}
+
+.content .status .amounts li.btnDonate a em {
+    display: inline-block;
+    font-style: normal;
+    font-size: 10px;
+    margin: 4px 5px 0;
+    text-transform: uppercase;
+    /* line-height: 0; */
+    pointer-events: none;
+    /* display: none; */
+    vertical-align: middle;
+}
+
+.content .status .amounts li.btnDonate a i {
+    pointer-events: none;
+}
+
 .content .status .amounts li.btnSave {
     /* display: inline-block; */
     /* border: 1px solid rgb(255 255 255 / 20%); */
@@ -5090,6 +5132,8 @@ body.high .content .status {
     background-image: url('../img/spr-treasure-01.png');
     background-repeat: no-repeat;
     display: inline-block;
+    bottom: -3px;
+    position: relative;
 }
 
 .treasure {
@@ -5748,6 +5792,23 @@ body.high .section.music {
     height: 11px;
 }
 
+.section.music ul.playlist li p b {
+    font-size: 9px;
+    line-height: 10px;
+    overflow: hidden;
+    display: inline-block;
+    text-transform: none;
+    /* height: 10px; */
+    font-family: 'Arial';
+    background: rgb(0 0 0 / 35%);
+    color: #FFFFFF;
+    padding: 3px 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 3px 0 0;
+}
+
 .section.music ul.playlist li a {
     float: left;
     display: block;
@@ -5795,6 +5856,20 @@ body.high .section.music {
 .resources form fieldset label {
     display: inline-block;
     vertical-align: middle;
+    border: 1px solid rgb(0 0 0 / 20%);
+    padding: 3px 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    /* line-height: 19px; */
+    font-weight: 700;
+}
+
+.resources form fieldset select {
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid rgb(0 0 0 / 20%);
+    padding: 3px 5px;
+    border-radius: 3px;
 }
 
 .resources form fieldset label p {
@@ -5808,6 +5883,15 @@ body.high .section.music {
 
 .resources form fieldset label input[type="radio"] {
     vertical-align: middle;
+    /*display:none;*/
+    display: inline-block;
+    pointer-events: none;
+}
+
+.resources form fieldset label img {
+    vertical-align: middle;
+    height: 25px;
+    pointer-events: none;
 }
 
 .resources form fieldset label span {
@@ -6022,7 +6106,117 @@ body.high .section.music {
 }
 
 .section.modSupport.active {
-    top: calc(50% - 46px) !important;
+    top: calc(50% - (178px / 2)) !important;
+}
+
+.section.modSupport .box {
+}
+
+.section.modSupport .box p {
+    text-align: center;
+}
+
+.section.modSupport .box p strong {
+}
+
+.section.modSupport .box p b {
+    display: inline-block !important;
+    color: #ffeb00 !important;
+    font-weight: normal !important;
+    font-size: 13px !important;
+    line-height: 13px !important;
+}
+
+.section.modSupport .box p em {
+    /* list-style: disc; */
+    display: block;
+    margin: 6px;
+    color: #00bf72;
+}
+
+.section.modSupport .box p b:last-of-type {
+    /* display: block; */
+    text-align: center;
+    font-weight: 700;
+    color: #00bf72;
+}
+
+.section.modSupport .box .percentSupport {
+    margin: 5px 0 15px;
+}
+
+.section.modSupport .box .percentSupport strong {
+    display: block;
+    font-size: 11px;
+    line-height: 11px;
+    color: #ffeb00;
+    text-align: center;
+}
+
+.section.modSupport .box .percentSupport span {
+    display: block;
+    width: 100%;
+    height: 7px;
+    border: 1px solid #ffeb00;
+    border-radius: 3px;
+    position: relative;
+}
+
+.section.modSupport .box .percentSupport span em {
+    display: block;
+    font-size: 9px;
+    font-style: normal;
+    line-height: 9px;
+    color: #ffeb00;
+    position: absolute;
+    top: 12px;
+    left: 0;
+}
+
+.section.modSupport .box .percentSupport span b {
+    height: 100%;
+    background: #ffeb00;
+    display: block;
+}
+
+.section.modSupport .box .percentSupport span em:last-of-type {
+    left: unset;
+    right: 0;
+}
+
+.section.modSupport .box ul {
+    display: block;
+    font-size: 0;
+    text-align: center;
+    margin: 0 0 5px;
+}
+
+.section.modSupport .box ul li {
+    display: inline-block;
+    margin: 3px;
+}
+
+.section.modSupport .box ul li a {
+    display: block;
+    color: #ffffff;
+    font-size: 13px;
+    line-height: 0;
+    background: #189b97;
+    padding: 12px 5px;
+    border: 1px solid #189b97;
+    border-radius: 3px;
+}
+
+.section.modSupport .box ul li a:hover, .section.modSupport .box ul li a:focus {
+}
+
+.section.modSupport .box b:last-of-type {
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    color: #00bf72;
+    font-size: 13px;
+    line-height: 13px;
 }
 
 /* -- jinn -- */
