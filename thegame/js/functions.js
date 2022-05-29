@@ -5,7 +5,7 @@
 // v.00bond (a wizard company)
 // - - - - - - - - - - - - - - - - - - -
 // #wf-202202112257
-// #wf-202205232314
+// #wf-202205291619
 // - - - - - - - - - - - - - - - - - - -
 // WIZARD FLY [adonis vieira]
 // http://wizrdfly.rf.gd
@@ -273,6 +273,8 @@ Wapp.STG = Wapp.STG || {};
         // fruitCount          : 0,
         // :: amount array create fruit :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         // fruitArray          : [],
+        // :: position background :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        bgPos               : 0,
         // :: box speed :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         boxSpeed            : doc.querySelectorAll('.content .status .info .speed span')[0],
         // :: percent speed value :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -494,7 +496,6 @@ Wapp.STG = Wapp.STG || {};
                 'bg-06.png',
                 'bg-07.png'
             ],
-            // -----
             'bg-desert-1' : [
                 'bg-01.png',
                 'bg-02.png',
@@ -540,17 +541,6 @@ Wapp.STG = Wapp.STG || {};
                 'bg-04.png',
                 'bg-05.png'
             ],
-            // -----
-            // 'bg-summer-1' : [
-            //     'bg-01.png',
-            //     'bg-02.png',
-            //     'bg-03.png',
-            //     'bg-04.png',
-            //     'bg-05.png',
-            //     'bg-06.png',
-            //     'bg-07.png',
-            // ],
-            // -----
             'bg-cartoon-forest-1' : [
                 'bg-01.png',
                 'bg-02.png',
@@ -604,7 +594,6 @@ Wapp.STG = Wapp.STG || {};
                 'bg-05.png',
                 'bg-06.png'
             ],
-            // -----
             'bg-cartoon-platformer' : [
                 'bg-01.png',
                 'bg-02.png',
@@ -614,7 +603,6 @@ Wapp.STG = Wapp.STG || {};
                 'bg-06.png',
                 'bg-07.png'
             ],
-            // -----
             'bg-green-zone-night' : [
                 'bg-01.png',
                 'bg-02.png',
@@ -629,7 +617,6 @@ Wapp.STG = Wapp.STG || {};
                 'bg-04.png',
                 'bg-05.png'
             ],
-            // -----
             'bg-industrial-zone' : [
                 'bg-01.png',
                 'bg-02.png',
@@ -637,7 +624,6 @@ Wapp.STG = Wapp.STG || {};
                 'bg-04.png',
                 'bg-05.png'
             ],
-            // -----
             'bg-desert-scrolling-1' : [
                 'bg-01.png',
                 'bg-02.png',
@@ -672,37 +658,29 @@ Wapp.STG = Wapp.STG || {};
         },
         // :: position terrain ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         posTerrain          : {
-            'bg-nature-florest' : '35px',
-            'bg-summer-1' : '40px',
-            'bg-cartoon-platformer-2' : '50px',
-            // -----
-            'bg-desert-1' : '51px',
-            'bg-horizontal-2d-1' : '13px',
-            'bg-horizontal-2d-2' : '0px',
-            'bg-horizontal-2d-3' : '0px',
-            'bg-horizontal-2d-4' : '0px',
-            // -----
-            // 'bg-summer-1' : '40px',
-            // -----
-            'bg-cartoon-forest-1' : '16px',
-            'bg-cartoon-forest-2' : '16px',
-            'bg-cartoon-forest-3' : '16px',
-            'bg-cartoon-platformer-4' : '20px',
-            'bg-cartoon-forest-4' : '16px',
-            'bg-florest-nice-1' : '40px',
-            'bg-cartoon-platformer-3' : '58px',
-            // -----
-            'bg-cartoon-platformer' : '60px',
-            // -----
-            'bg-green-zone-night' : '0px',
-            'bg-green-zone' : '0px',
-            // -----
-            'bg-industrial-zone' : '20px',
-            // -----
-            'bg-desert-scrolling-1' : '24px',
-            'bg-desert-scrolling-2' : '24px',
-            'bg-halloween-1' : '34px',
-            'bg-halloween-2' : '32px'
+            'bg-nature-florest'         : '35px',
+            'bg-summer-1'               : '40px',
+            'bg-cartoon-platformer-2'   : '46px',
+            'bg-desert-1'               : '41px',
+            'bg-horizontal-2d-1'        : '20px',
+            'bg-horizontal-2d-2'        : '25px',
+            'bg-horizontal-2d-3'        : '25px',
+            'bg-horizontal-2d-4'        : '20px',
+            'bg-cartoon-forest-1'       : '16px',
+            'bg-cartoon-forest-2'       : '16px',
+            'bg-cartoon-forest-3'       : '16px',
+            'bg-cartoon-platformer-4'   : '22px',
+            'bg-cartoon-forest-4'       : '16px',
+            'bg-florest-nice-1'         : '45px',
+            'bg-cartoon-platformer-3'   : '58px',
+            'bg-cartoon-platformer'     : '60px',
+            'bg-green-zone-night'       : '20px',
+            'bg-green-zone'             : '20px',
+            'bg-industrial-zone'        : '20px',
+            'bg-desert-scrolling-1'     : '24px',
+            'bg-desert-scrolling-2'     : '24px',
+            'bg-halloween-1'            : '34px',
+            'bg-halloween-2'            : '31px'
         },
         // :: box message :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         // speed            : doc.querySelectorAll('.changeBg')[0],
@@ -729,6 +707,9 @@ Wapp.STG = Wapp.STG || {};
     /* init all functions */
     Wapp.STG.Init = function (e) {
         console.log('STG - STREET GAME [init]');
+
+        // console.log('Vars.backgrounds', Vars.backgrounds);
+        // console.log('Vars.posTerrain', Vars.posTerrain);
 
         /*
         // ----------------------------------------------------------
@@ -814,12 +795,12 @@ Wapp.STG = Wapp.STG || {};
         // -----------------------------------------------------
 
         // create modal players select (for STORE)
-        // Wapp.STG.CreatePlayerSelect();
-        console.log('DISABLED > Wapp.STG.CreatePlayerSelect');
+        Wapp.STG.CreatePlayerSelect();
+        // console.log('DISABLED > Wapp.STG.CreatePlayerSelect');
 
         // create modal backgrounds select (for STORE)
-        // Wapp.STG.CreateBackgroundSelect();
-        console.log('DISABLED > Wapp.STG.CreateBackgroundSelect');
+        Wapp.STG.CreateBackgroundSelect();
+        // console.log('DISABLED > Wapp.STG.CreateBackgroundSelect');
 
         // create modal musics select (for STORE)
         // Wapp.STG.CreateMusicSelect();
@@ -1248,6 +1229,12 @@ Wapp.STG = Wapp.STG || {};
     Wapp.STG.Key = function (e, move) {
         // console.log(':: Key [fnc]');
 
+        var
+            boxEffects = '',
+            htmlPlayerEffects = '',
+            wI = 0,
+            tRemove = 100;
+
         // console.log('e', e);
         // console.log(e.keyCode);
 
@@ -1272,6 +1259,23 @@ Wapp.STG = Wapp.STG || {};
                 Vars.keyd = true;
 
                 // ---------------------
+                // player MOVE EFFECTS
+                // ---------------------
+                for (wI = 0; wI < 5; wI++) {
+                    // htmlPlayerEffects += '<b class="walkEffect wI' + wI + ' walk smokeWalk positionLeft"></b>';
+                    htmlPlayerEffects += '<b class="walkEffect wI' + wI + ' ' + Vars.player.className + '" style="bottom:' + Vars.posTerrain[Object.keys(Vars.posTerrain)[Vars.bgSelected]] + ';"></b>';
+                }
+
+                boxEffects = doc.createElement('DIV');
+                boxEffects.classList.add('boxEffects');
+                boxEffects.innerHTML = htmlPlayerEffects;
+
+                if (!doc.querySelectorAll('.boxEffects')[0]) {
+                    doc.querySelectorAll('.game .boxPlayer')[0].appendChild(boxEffects);
+                }
+                // ---------------------
+
+                // ---------------------
                 // background MOVE LEFT
                 // ---------------------
                 Wapp.STG.BgMove(e, 'left');
@@ -1292,6 +1296,23 @@ Wapp.STG = Wapp.STG || {};
                 Vars.keyd = true;
 
                 // ---------------------
+                // player MOVE EFFECTS
+                // ---------------------
+                for (wI = 0; wI < 5; wI++) {
+                    // htmlPlayerEffects += '<b class="walkEffect wI' + wI + ' walk smokeWalk positionLeft"></b>';
+                    htmlPlayerEffects += '<b class="walkEffect wI' + wI + ' ' + Vars.player.className + '" style="bottom:' + Vars.posTerrain[Object.keys(Vars.posTerrain)[Vars.bgSelected]] + ';"></b>';
+                }
+
+                boxEffects = doc.createElement('DIV');
+                boxEffects.classList.add('boxEffects');
+                boxEffects.innerHTML = htmlPlayerEffects;
+
+                if (!doc.querySelectorAll('.boxEffects')[0]) {
+                    doc.querySelectorAll('.game .boxPlayer')[0].appendChild(boxEffects);
+                }
+                // ---------------------
+
+                // ---------------------
                 // background MOVE RIGHT
                 // ---------------------
                 Wapp.STG.BgMove(e, 'right');
@@ -1309,6 +1330,26 @@ Wapp.STG = Wapp.STG || {};
                 Vars.player.classList.add('idle');
 
                 Vars.keyd = false;
+
+                // ---------------------
+                // player MOVE EFFECTS [remove]
+                // ---------------------
+                if (doc.querySelectorAll('.boxEffects')[0]) {
+                    [].forEach.call(doc.querySelectorAll('.walkEffect'), function (block, index) {
+                        setTimeout(function (blk) {
+                            blk.remove();
+                        }, (tRemove * (index + 1)), block);
+
+                        if (index === (doc.querySelectorAll('.walkEffect').length - 1)) {
+                            setTimeout(function () {
+                                if (doc.querySelectorAll('.boxEffects')[0]) {
+                                    doc.querySelectorAll('.boxEffects')[0].remove();
+                                }
+                            }, (tRemove * (index + 1)));
+                        }
+                    });
+                }
+                // ---------------------
             }
 
             e.preventDefault();
@@ -1508,6 +1549,23 @@ Wapp.STG = Wapp.STG || {};
                 Vars.keyd = true;
 
                 // ---------------------
+                // player MOVE EFFECTS
+                // ---------------------
+                for (wI = 0; wI < 5; wI++) {
+                    // htmlPlayerEffects += '<b class="walkEffect wI' + wI + ' walk smokeWalk positionLeft"></b>';
+                    htmlPlayerEffects += '<b class="walkEffect wI' + wI + ' ' + Vars.player.className + '" style="bottom:' + Vars.posTerrain[Object.keys(Vars.posTerrain)[Vars.bgSelected]] + ';"></b>';
+                }
+
+                boxEffects = doc.createElement('DIV');
+                boxEffects.classList.add('boxEffects');
+                boxEffects.innerHTML = htmlPlayerEffects;
+
+                if (!doc.querySelectorAll('.boxEffects')[0]) {
+                    doc.querySelectorAll('.game .boxPlayer')[0].appendChild(boxEffects);
+                }
+                // ---------------------
+
+                // ---------------------
                 // background MOVE LEFT
                 // ---------------------
                 Wapp.STG.BgMove(e, 'left');
@@ -1528,6 +1586,23 @@ Wapp.STG = Wapp.STG || {};
                 Vars.player.classList.add('walk', 'smokeWalk');
 
                 Vars.keyd = true;
+
+                // ---------------------
+                // player MOVE EFFECTS
+                // ---------------------
+                for (wI = 0; wI < 5; wI++) {
+                    // htmlPlayerEffects += '<b class="walkEffect wI' + wI + '"></b>';
+                    htmlPlayerEffects += '<b class="walkEffect wI' + wI + ' ' + Vars.player.className + '" style="bottom:' + Vars.posTerrain[Object.keys(Vars.posTerrain)[Vars.bgSelected]] + ';"></b>';
+                }
+
+                boxEffects = doc.createElement('DIV');
+                boxEffects.classList.add('boxEffects');
+                boxEffects.innerHTML = htmlPlayerEffects;
+
+                if (!doc.querySelectorAll('.boxEffects')[0]) {
+                    doc.querySelectorAll('.game .boxPlayer')[0].appendChild(boxEffects);
+                }
+                // ---------------------
 
                 // ---------------------
                 // background MOVE RIGHT
@@ -1569,6 +1644,26 @@ Wapp.STG = Wapp.STG || {};
 
                 Vars.keyd = false;
 
+                // ---------------------
+                // player MOVE EFFECTS [remove]
+                // ---------------------
+                if (doc.querySelectorAll('.boxEffects')[0]) {
+                    [].forEach.call(doc.querySelectorAll('.walkEffect'), function (block, index) {
+                        setTimeout(function (blk) {
+                            blk.remove();
+                        }, (tRemove * (index + 1)), block);
+
+                        if (index === (doc.querySelectorAll('.walkEffect').length - 1)) {
+                            setTimeout(function () {
+                                if (doc.querySelectorAll('.boxEffects')[0]) {
+                                    doc.querySelectorAll('.boxEffects')[0].remove();
+                                }
+                            }, (tRemove * (index + 1)));
+                        }
+                    });
+                }
+                // ---------------------
+
                 if (e.keyCode === 40) {
                     // console.log('keyup: DOWN');
 
@@ -1589,6 +1684,8 @@ Wapp.STG = Wapp.STG || {};
     /* background move */
     Wapp.STG.BgMove = function (e, direction) {
         // console.log(':: BgMove [fnc]');
+
+        // return false;
 
         var
             // direction = '',
@@ -1628,9 +1725,9 @@ Wapp.STG = Wapp.STG || {};
                 if (pSpeed >= 100) {
                     pSpeed = 100;
 
-                    if (Vars.boxSpeed) {
+                    // if (Vars.boxSpeed) {
                         // Vars.boxSpeed.classList.add('hue');
-                    }
+                    // }
                 }
 
                 // console.log('pSpeed', pSpeed);
@@ -1679,19 +1776,46 @@ Wapp.STG = Wapp.STG || {};
                         // console.log('not position, ZERO');
                         pos = 0;
 
+                        // ------------------
+                        // global position bg
+                        // ------------------
+                        // Vars.bgPos += pos;
+
                     } else {
                         // console.log('position, INCREMENT');
                         pos = parseFloat(compStyles.getPropertyValue('background-position-x').replace('px', ''));
+
+                        // ------------------
+                        // global position bg
+                        // ------------------
+                        // Vars.bgPos = pos;
                     }
 
                     if (direction === 'left') {
                         // console.log('bg move LEFT');
                         pos += newPos;
 
+                        // ------------------
+                        // global position bg
+                        // ------------------
+                        // Vars.bgPos += newPos;
+
                     } else if (direction === 'right') {
                         // console.log('bg move RIGHT');
                         pos -= newPos;
+
+                        // ------------------
+                        // global position bg
+                        // ------------------
+                        // Vars.bgPos -= newPos;
                     }
+
+                    // ------------------
+                    // global position bg
+                    // ------------------
+                    Vars.bgPos  = pos;
+                    // console.log('Vars.bgPos', Vars.bgPos);
+                    // ------------------
 
                     // console.log('pos', pos);
 
@@ -1708,6 +1832,13 @@ Wapp.STG = Wapp.STG || {};
                     // console.log('Vars.percentSpeed', Vars.percentSpeed);
 
                     // console.log('pos', pos);
+
+                    // --------------
+                    // set GLOBAL POS
+                    // --------------
+                    // console.log('EDIT GLOBAL pos');
+                    // console.log('Vars.bgPos', Vars.bgPos);
+                    // --------------
 
                     // ################################
                     // --------------------------------
@@ -1801,7 +1932,7 @@ Wapp.STG = Wapp.STG || {};
                 if (Vars.boxSpeed) {
                     Vars.boxSpeed.style.width = pSpeed + '%';
                     Vars.boxSpeed.textContent = pSpeed + '%';
-                    Vars.boxSpeed.classList.remove('hue');
+                    // Vars.boxSpeed.classList.remove('hue');
                 }
 
                 clearInterval(ani);
@@ -2755,15 +2886,118 @@ Wapp.STG = Wapp.STG || {};
             html = '',
             x = 0,
             loop = true,
-            images = [];
+            images = [],
+            newPos = 0,
+            stlBgPos = '';
 
+        // SET POSITION OBJECTS [player, messages, fruits by TERRAIN]
+        // console.log('>> set position objects [player, messages, fruits by TERRAIN]');
+
+        // console.log('OBJ BG', Vars.backgrounds);
+
+        for (key in Vars.backgrounds) {
+            // console.log('key', key);
+            // console.log('values', Vars.backgrounds[key]);
+
+            if (x === Vars.bgSelected) {
+                // console.log('x', x);
+                // console.log('Vars.bgSelected', Vars.bgSelected);
+                // console.log('key >>> ', key);
+
+                // -------------
+                // create blocks
+                // -------------
+                [].forEach.call(Vars.backgrounds[key], function (box, index) {
+                    // ---------------------------------
+                    // store image [for get PIXEL color]
+                    // ---------------------------------
+                    // for TOP
+                    if (index === 0) {
+                        images[0] = 'thegame/img/backgrounds' + '/' + key + '/' + box;
+                    }
+
+                    // for BOTTOM
+                    if (index === (Vars.backgrounds[key].length - 1)) {
+                        images[1] = 'thegame/img/backgrounds' + '/' + key + '/' + box;
+                    }
+                    // ---------------------------------
+
+                    // ----------------------------
+                    // INCREMENT POSITION BY GLOBAL
+                    // ----------------------------
+                    // ----------------------
+                    // NEW POSITIONS PARALLAX
+                    // ----------------------
+                    if (index === 0) {
+                        newPos = Vars.mSpeed;
+
+                    } else {
+                        newPos = parseFloat(index * Vars.mSpeed);
+                    }
+
+                    // -----
+                    // STYLE
+                    // -----
+                    // block.style.backgroundPositionX = pos + 'px';
+                    stlBgPos = parseFloat(Vars.bgPos + newPos) + 'px';
+                    // ----------------------------
+
+                    html += '<div class="bg" style="background-image: url(thegame/img/backgrounds' + '/' + key + '/' + box + '); background-position-x:' + stlBgPos + ';"></div>';
+                });
+                // -------------
+
+                // ---------------------------------------------------------
+                // change position PLAYER | WALKEFFECT | BOXMSGTIPS | BOXFRUIT by terrain
+                // ---------------------------------------------------------
+                // console.log('Vars.posTerrain', Vars.posTerrain);
+                // console.log('Vars.bgSelected', Vars.bgSelected);
+                // console.log('Vars.posTerrain[Vars.bgSelected]', Vars.posTerrain[Object.keys(Vars.posTerrain)[Vars.bgSelected]]);
+                // console.log('Object.keys(Vars.backgrounds)', Object.keys(Vars.posTerrain)[Vars.bgSelected]);
+
+                Vars.player.style.bottom = Vars.posTerrain[Object.keys(Vars.posTerrain)[Vars.bgSelected]];
+                Vars.boxMsgTips.style.bottom = Vars.posTerrain[Object.keys(Vars.posTerrain)[Vars.bgSelected]];
+                Vars.boxFruit.style.bottom = Vars.posTerrain[Object.keys(Vars.posTerrain)[Vars.bgSelected]];
+
+                // [].forEach.call(doc.querySelectorAll('.walkEffect'), function (block, index) {
+                //     block.bottom = Vars.posTerrain[Object.keys(Vars.posTerrain)[Vars.bgSelected]];
+                // });
+
+                // console.log('Vars.posTerrain', Vars.posTerrain[Object.keys(Vars.posTerrain)[Vars.bgSelected]]);
+                // ---------------------------------------------------------
+
+                if (doc.querySelectorAll('.bgs')[0]) {
+                    doc.querySelectorAll('.bgs')[0].innerHTML = html;
+
+                    // console.log('images', images);
+                    // console.log('for TOP', images[0]);
+                    // console.log('for BOTTOM', images[1]);
+
+                    // ----------------------------------------
+                    // GET COLORS FOR TOP AND BOTTOM BACKGROUND
+                    // ----------------------------------------
+                    Wapp.STG.GetColors('top', images[0], 0, 0);
+                    Wapp.STG.GetColors('bottom', images[1], 0, 0);
+                    // ----------------------------------------
+                }
+
+                // edit global BG
+                // Vars.bg = doc.querySelectorAll('.game .bg');
+                // console.log('Vars.bg', Vars.bg);
+            }
+
+            x++;
+        };
+
+        /// ----------------------------
+
+        /*
         for (key in Vars.backgrounds) {
             html = '';
 
-            // console.log('key', key);
-            // console.log('values', Vars.backgrounds[key]);
-            // console.log('length', Vars.backgrounds[key].length);
-            // console.log('---');
+            console.log('key', key);
+            console.log('values', Vars.backgrounds[key]);
+            console.log('length', Vars.backgrounds[key].length);
+            console.log('---');
 
             // create blocks
             [].forEach.call(Vars.backgrounds[key], function (box, index) {
@@ -2808,6 +3042,8 @@ Wapp.STG = Wapp.STG || {};
 
             // console.log('---');
             // console.log('html', html);
+
+            console.log('Vars.bgSelected', Vars.bgSelected);
 
             // print first background [DEBUG]
             if (loop === true) {
@@ -2855,7 +3091,9 @@ Wapp.STG = Wapp.STG || {};
 
             x++;
         }
+        */
 
+        // set global bg
         Vars.bg = doc.querySelectorAll('.game .bg');
 
         e.preventDefault();
@@ -2972,10 +3210,15 @@ Wapp.STG = Wapp.STG || {};
     Wapp.STG.ChangePlayer = function (e) {
         // console.log(':: ChangePlayer [fnc]');
 
+        // SET NAME PLAYER
+        console.log('>> set player name');
+        // SET COVER PLAYER
+        console.log('>> set player cover');
+
         // ---------------------------
         // change skins
         // ---------------------------
-        Vars.skinsSelected ++;
+        // Vars.skinsSelected ++;
 
         if (!Vars.skins[Vars.skinsSelected]) {
             Vars.skinsSelected = 0;
@@ -2988,17 +3231,17 @@ Wapp.STG = Wapp.STG || {};
         // change names
         // ---------------------------
         // set player name
-        if (Vars.status.querySelectorAll('.name')[0]) {
-            Vars.status.querySelectorAll('.name')[0].textContent = Vars.names[Vars.skinsSelected];
-        }
+        // if (Vars.status.querySelectorAll('.name')[0]) {
+        //     Vars.status.querySelectorAll('.name')[0].textContent = Vars.names[Vars.skinsSelected];
+        // }
 
         // ---------------------------
         // change thumbs
         // ---------------------------
         // set player thumb
-        if (Vars.status.querySelectorAll('.thumb i')[0]) {
-            Vars.status.querySelectorAll('.thumb i')[0].className = Vars.skins[Vars.skinsSelected].split(' ')[1] + ' picture';
-        }
+        // if (Vars.status.querySelectorAll('.thumb i')[0]) {
+        //     Vars.status.querySelectorAll('.thumb i')[0].className = Vars.skins[Vars.skinsSelected].split(' ')[1] + ' picture';
+        // }
 
         e.preventDefault();
         return false;
@@ -3098,8 +3341,11 @@ Wapp.STG = Wapp.STG || {};
         // console.log(':: CreatePlayerSelect [fnc]');
 
         var
-            html = '';
+            html = '',
             // randomColor = '';
+            amount = Object.keys(Vars.skins).length;
+
+        // console.log('amount pl', amount);
 
 
         // console.log('boxPlayerSlc', Vars.boxPlayerSlc);
@@ -3119,7 +3365,8 @@ Wapp.STG = Wapp.STG || {};
                 html += '<div class="box">';
                     // html += '<a href="#" title="' + el + '" style="background:#' + randomColor + ';">';
                     // html += '<a href="#" class="get" title="' + el + '" data-info="' + el + '">';
-                    html += '<a class="get" title="' + el + '" data-info="' + el + '">';
+                    // html += '<a class="get" title="' + el + '" data-info="' + el + '" data-item="player">';
+                    html += '<a>';
                         // html += '<span class="material-icons-outlined btnPlayerDetails">';
                         //     html += 'live_help';
                         // html += '</span>';
@@ -3186,7 +3433,8 @@ Wapp.STG = Wapp.STG || {};
                     html += '</div>';
                 html += '</div>';
                 // html += '<a href="#" title="Buy" class="btnBuy" data-info="' + el + '" data-value="' + el + '">';
-                html += '<a href="#" title="Buy" class="btnBuy" data-info="' + el + '" data-value="50">';
+                // html += '<a href="#" title="Buy" class="btnBuy" data-info="' + el + '" data-value="50">';
+                html += '<a href="#" title="Buy" class="btnBuy" data-info="' + el + '" data-item="player" data-index="' + index + '">';
                     html += '<i class="sprTreasure sprFruits"></i>';
                     html += '<em>';
                         html += '9999';
@@ -3198,6 +3446,9 @@ Wapp.STG = Wapp.STG || {};
         // append
         if (Vars.boxPlayerSlc) {
             Vars.boxPlayerSlc.innerHTML = html;
+
+            // box size
+            Vars.boxPlayerSlc.style.width = parseFloat(amount * 200) + 'px';
         }
 
         // ----------------
@@ -3211,10 +3462,10 @@ Wapp.STG = Wapp.STG || {};
         });
 
         // buy
-        [].forEach.call(doc.querySelectorAll('.btnBuy'), function (el) {
-            // console.log('el', el);
-            el.addEventListener(Vars.deviceEvents[Vars.deviceClient]['click'], Wapp.STG.BuyItems, true);
-        });
+        // [].forEach.call(doc.querySelectorAll('.btnBuy'), function (el) {
+        //     // console.log('el', el);
+        //     el.addEventListener(Vars.deviceEvents[Vars.deviceClient]['click'], Wapp.STG.BuyItems, true);
+        // });
     };
 
     /* show | hide player details */
@@ -3254,7 +3505,38 @@ Wapp.STG = Wapp.STG || {};
 
     /* buy items store */
     Wapp.STG.BuyItems = function (e) {
-        console.log(':: BuyItems [fnc]');
+        // console.log(':: BuyItems [fnc]');
+
+        // console.log('dataset.info', e.target.dataset.info);
+        // console.log('dataset.item', e.target.dataset.item);
+        // console.log('dataset.index', e.target.dataset.index);
+
+        if ((e.target.dataset.item) && (e.target.dataset.info) && (e.target.dataset.index)) {
+            // -------------------
+            // SET PLAYER selected
+            // -------------------
+            if (e.target.dataset.item === 'player') {
+                // console.log('change player');
+
+                // set player selected
+                Vars.skinsSelected = parseFloat(e.target.dataset.index);
+                // console.log('skinsSelected', Vars.skinsSelected);
+
+                Wapp.STG.ChangePlayer(e);
+
+            // -----------------------
+            // SET BACKGROUND selected
+            // -----------------------
+            } else if (e.target.dataset.item === 'background') {
+                // console.log('change background');
+
+                // set background selected
+                Vars.bgSelected = parseFloat(e.target.dataset.index);
+                // console.log('bgSelected', Vars.bgSelected);
+
+                Wapp.STG.ChangeBg(e);
+            }
+        }
 
         /*
         var
@@ -3305,16 +3587,20 @@ Wapp.STG = Wapp.STG || {};
 
         var
             html = '',
-            imgName = 'cover.jpg';
+            imgName = 'cover.jpg',
+            amount = Object.keys(Vars.backgrounds).length;
 
-        [].forEach.call(Object.keys(Vars.backgrounds), function (el) {
+        // console.log('amount bg', amount);
+
+        [].forEach.call(Object.keys(Vars.backgrounds), function (el, index) {
             // console.log('el', el);
 
             html += '<!-- slide -->';
             html += '<div class="item">';
                 html += '<div class="box">';
                     // html += '<a href="#" class="get" title="' + el + '" data-info="' + el + '">';
-                    html += '<a class="get" title="' + el + '" data-info="' + el + '">';
+                    // html += '<a class="get" title="' + el + '" data-info="' + el + '" data-item="background">';
+                    html += '<a>';
                         html += '<img src="thegame/img/backgrounds/' + el + '/' + imgName + '" alt="' + el + '"/>';
                         html += '<p>';
                             // html += '<strong>';
@@ -3326,7 +3612,7 @@ Wapp.STG = Wapp.STG || {};
                         html += '</p>';
                     html += '</a>';
                 html += '</div>';
-                html += '<a href="#" title="Buy" class="btnBuy">';
+                html += '<a href="#" title="Buy" class="btnBuy" data-info="' + el + '" data-item="background" data-index="' + index + '">';
                     html += '<i class="sprTreasure sprFruits"></i>';
                     html += '<em>';
                         html += '9999';
@@ -3338,7 +3624,16 @@ Wapp.STG = Wapp.STG || {};
         // append
         if (Vars.boxBackgroundSlc) {
             Vars.boxBackgroundSlc.innerHTML = html;
+
+            // box size
+            Vars.boxBackgroundSlc.style.width = parseFloat(amount * 200) + 'px';
         }
+
+        // buy
+        [].forEach.call(doc.querySelectorAll('.btnBuy'), function (el) {
+            // console.log('el', el);
+            el.addEventListener(Vars.deviceEvents[Vars.deviceClient]['click'], Wapp.STG.BuyItems, true);
+        });
     };
 
     /* create music select GUI [for STORE] */
@@ -3633,7 +3928,8 @@ Wapp.STG = Wapp.STG || {};
 
                     // STOP ANIMATION
                     // 80% (0 - 80) [move position TOP - DOWN]
-                    if (x >= 80) {
+                    // if (x >= 80) {
+                    if (x >= 95) {
                         clearInterval(fruitInt);
 
                         // ------------
