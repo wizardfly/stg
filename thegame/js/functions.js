@@ -5,7 +5,7 @@
 // v.00bond (a wizard company)
 // - - - - - - - - - - - - - - - - - - -
 // #wf-202202112257
-// #wf-202205291619
+// #wf-202206041243
 // - - - - - - - - - - - - - - - - - - -
 // WIZARD FLY [adonis vieira]
 // http://wizrdfly.rf.gd
@@ -53,6 +53,10 @@ Wapp.STG = Wapp.STG || {};
         musicPlaylist       : doc.querySelectorAll('.section.music ul.playlist')[0],
         // :: music playlist api ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         musicApi            : 'thegame/api/musics.json',
+        // :: offers api ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        offersApi           : 'thegame/api/offers.json',
+        // :: box offers ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        boxOffers           : doc.querySelectorAll('.bannersOffers ul')[0],
         // :: box controls mobile :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         controlsMob         : doc.querySelectorAll('.controlsMob')[0],
         // :: position touch start controls mobile ::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -326,6 +330,12 @@ Wapp.STG = Wapp.STG || {};
         death               : doc.querySelectorAll('.game .sprDeath')[0],
         // :: player skins ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         skins               : [
+            'cat01 sprCat01 idle',
+            'dragons01 sprDragons01 idle',
+            'haohmaru01 sprHaohmaru01 idle',
+            'shiki01 sprShiki01 idle',
+            'yomi01 sprYomi01 idle',
+            'felicia01 sprFelicia01 idle',
             'dog01 sprDog01 idle',
             'dog02 sprDog02 idle',
             'alien01 sprAlien01 idle',
@@ -338,7 +348,7 @@ Wapp.STG = Wapp.STG || {};
             // -----
             // 'dog02 sprDog02 idle',
             // -----
-            'cat01 sprCat01 idle',
+            // 'cat01 sprCat01 idle',
             'bird01 sprBird01 idle',
             'bird02 sprBird02 idle',
             'vulture01 sprVulture01 idle',
@@ -353,6 +363,12 @@ Wapp.STG = Wapp.STG || {};
         skinsSelected       : 0,
         // :: player name :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         names               : [
+            'Persa Catch',
+            'Dragons Child',
+            'Haohmaru Shodown',
+            'Shiki Kagura',
+            'Yomi Kagura',
+            'Felicia Catwoman',
             'Dobe Doggy',
             'Shelba Inu',
             'Dude Monster',
@@ -365,7 +381,7 @@ Wapp.STG = Wapp.STG || {};
             // -----
             // 'Shiba Inu',
             // -----
-            'Persa Catch',
+            // 'Persa Catch',
             'Asa Branca',
             'Corvus Corax',
             'Buzz Buzzard',
@@ -465,6 +481,16 @@ Wapp.STG = Wapp.STG || {};
         firstEvent          : true,
         // :: backgrounds :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         backgrounds         : {
+            'bg-horizontal-2d-3' : [
+                'bg-01.png',
+                'bg-02.png',
+                'bg-03.png',
+                'bg-04.png',
+                'bg-05.png',
+                'bg-06.png',
+                'bg-07.png',
+                'bg-08.png'
+            ],
             'bg-nature-florest' : [
                 'bg-01.png',
                 'bg-02.png',
@@ -523,16 +549,6 @@ Wapp.STG = Wapp.STG || {};
                 'bg-07.png',
                 'bg-08.png',
                 'bg-09.png'
-            ],
-            'bg-horizontal-2d-3' : [
-                'bg-01.png',
-                'bg-02.png',
-                'bg-03.png',
-                'bg-04.png',
-                'bg-05.png',
-                'bg-06.png',
-                'bg-07.png',
-                'bg-08.png'
             ],
             'bg-horizontal-2d-4' : [
                 'bg-01.png',
@@ -658,13 +674,13 @@ Wapp.STG = Wapp.STG || {};
         },
         // :: position terrain ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         posTerrain          : {
+            'bg-horizontal-2d-3'        : '25px',
             'bg-nature-florest'         : '35px',
             'bg-summer-1'               : '40px',
             'bg-cartoon-platformer-2'   : '46px',
             'bg-desert-1'               : '41px',
             'bg-horizontal-2d-1'        : '20px',
             'bg-horizontal-2d-2'        : '25px',
-            'bg-horizontal-2d-3'        : '25px',
             'bg-horizontal-2d-4'        : '20px',
             'bg-cartoon-forest-1'       : '16px',
             'bg-cartoon-forest-2'       : '16px',
@@ -807,6 +823,9 @@ Wapp.STG = Wapp.STG || {};
 
         // create musics playlist
         Wapp.STG.CreateMusicPlaylist();
+
+        // create offers banners
+        Wapp.STG.CreateOffers();
 
         // all listeners
         Wapp.STG.Listen();
@@ -1233,7 +1252,7 @@ Wapp.STG = Wapp.STG || {};
             boxEffects = '',
             htmlPlayerEffects = '',
             wI = 0,
-            tRemove = 100;
+            tRemove = 50;
 
         // console.log('e', e);
         // console.log(e.keyCode);
@@ -1261,7 +1280,7 @@ Wapp.STG = Wapp.STG || {};
                 // ---------------------
                 // player MOVE EFFECTS
                 // ---------------------
-                for (wI = 0; wI < 5; wI++) {
+                for (wI = 0; wI < 8; wI++) {
                     // htmlPlayerEffects += '<b class="walkEffect wI' + wI + ' walk smokeWalk positionLeft"></b>';
                     htmlPlayerEffects += '<b class="walkEffect wI' + wI + ' ' + Vars.player.className + '" style="bottom:' + Vars.posTerrain[Object.keys(Vars.posTerrain)[Vars.bgSelected]] + ';"></b>';
                 }
@@ -1298,7 +1317,7 @@ Wapp.STG = Wapp.STG || {};
                 // ---------------------
                 // player MOVE EFFECTS
                 // ---------------------
-                for (wI = 0; wI < 5; wI++) {
+                for (wI = 0; wI < 8; wI++) {
                     // htmlPlayerEffects += '<b class="walkEffect wI' + wI + ' walk smokeWalk positionLeft"></b>';
                     htmlPlayerEffects += '<b class="walkEffect wI' + wI + ' ' + Vars.player.className + '" style="bottom:' + Vars.posTerrain[Object.keys(Vars.posTerrain)[Vars.bgSelected]] + ';"></b>';
                 }
@@ -1336,6 +1355,9 @@ Wapp.STG = Wapp.STG || {};
                 // ---------------------
                 if (doc.querySelectorAll('.boxEffects')[0]) {
                     [].forEach.call(doc.querySelectorAll('.walkEffect'), function (block, index) {
+                        block.classList.remove('walk');
+                        block.classList.add('idle');
+
                         setTimeout(function (blk) {
                             blk.remove();
                         }, (tRemove * (index + 1)), block);
@@ -1551,7 +1573,7 @@ Wapp.STG = Wapp.STG || {};
                 // ---------------------
                 // player MOVE EFFECTS
                 // ---------------------
-                for (wI = 0; wI < 5; wI++) {
+                for (wI = 0; wI < 8; wI++) {
                     // htmlPlayerEffects += '<b class="walkEffect wI' + wI + ' walk smokeWalk positionLeft"></b>';
                     htmlPlayerEffects += '<b class="walkEffect wI' + wI + ' ' + Vars.player.className + '" style="bottom:' + Vars.posTerrain[Object.keys(Vars.posTerrain)[Vars.bgSelected]] + ';"></b>';
                 }
@@ -1590,7 +1612,7 @@ Wapp.STG = Wapp.STG || {};
                 // ---------------------
                 // player MOVE EFFECTS
                 // ---------------------
-                for (wI = 0; wI < 5; wI++) {
+                for (wI = 0; wI < 8; wI++) {
                     // htmlPlayerEffects += '<b class="walkEffect wI' + wI + '"></b>';
                     htmlPlayerEffects += '<b class="walkEffect wI' + wI + ' ' + Vars.player.className + '" style="bottom:' + Vars.posTerrain[Object.keys(Vars.posTerrain)[Vars.bgSelected]] + ';"></b>';
                 }
@@ -1649,6 +1671,9 @@ Wapp.STG = Wapp.STG || {};
                 // ---------------------
                 if (doc.querySelectorAll('.boxEffects')[0]) {
                     [].forEach.call(doc.querySelectorAll('.walkEffect'), function (block, index) {
+                        block.classList.remove('walk');
+                        block.classList.add('idle');
+
                         setTimeout(function (blk) {
                             blk.remove();
                         }, (tRemove * (index + 1)), block);
@@ -3437,7 +3462,8 @@ Wapp.STG = Wapp.STG || {};
                 html += '<a href="#" title="Buy" class="btnBuy" data-info="' + el + '" data-item="player" data-index="' + index + '">';
                     html += '<i class="sprTreasure sprFruits"></i>';
                     html += '<em>';
-                        html += '9999';
+                        // html += '9999';
+                        html += 'FREE';
                     html += '</em>';
                 html += '</a>';
             html += '</div>';
@@ -3615,7 +3641,8 @@ Wapp.STG = Wapp.STG || {};
                 html += '<a href="#" title="Buy" class="btnBuy" data-info="' + el + '" data-item="background" data-index="' + index + '">';
                     html += '<i class="sprTreasure sprFruits"></i>';
                     html += '<em>';
-                        html += '9999';
+                        // html += '9999';
+                        html += 'FREE';
                     html += '</em>';
                 html += '</a>';
             html += '</div>';
@@ -3772,6 +3799,91 @@ Wapp.STG = Wapp.STG || {};
         // listeners
         // :: button music play
         Wapp.STG.AddEvents('click', Vars.musicPlay, Wapp.STG.MusicControls, true);
+    };
+
+    /* create offers banners */
+    Wapp.STG.CreateOffers = function (e) {
+        // console.log(':: CreateOffers [fnc]');
+
+        var
+            ajax = new XMLHttpRequest();
+
+        // AJAX
+        ajax.open('GET', Vars.offersApi, true);
+        ajax.setRequestHeader('Content-Type', 'application/json');
+        ajax.send();
+
+        ajax.onreadystatechange = function () {
+            if (ajax.readyState === 4) {
+                if (ajax.status === 200){
+                    // SUCCESS
+                    // console.log('AJAX - SEND Successfully!',  ajax.responseText);
+
+                    Wapp.STG.PopulateOffers(e, ajax.responseText, 'SUCCESS');
+
+                } else {
+                    // ERROR
+                    // console.log('AJAX - SEND Error!',  ajax.returnText);
+
+                    Wapp.STG.PopulateOffers(e, ajax.responseText, 'ERROR');
+                }
+            }
+        };
+    };
+
+    /* populate offers */
+    Wapp.STG.PopulateOffers = function (e, obj, status) {
+        // console.log(':: PopulateOffers [fnc]');
+
+        // console.log('e', e);
+        // console.log('obj', JSON.parse(obj));
+        // console.log('status', status);
+
+        if (status === 'ERROR') {
+            return false;
+        }
+
+        var
+            html = '',
+            x = 0,
+            amount = JSON.parse(obj).length;
+
+        // console.log('amount', amount);
+
+        [].forEach.call(JSON.parse(obj), function (offer) {
+            // console.log('offer', offer);
+
+            html += '<li>';
+                html += '<a href="' + offer.url + '" title="' + offer.name + '" target="_blank">';
+                    html += '<p>';
+                        html += '<strong>';
+                            html += offer.name;
+                        html += '</strong>';
+                        html += '<img src="' + offer.img + '" alt="' + offer.name + '"/>';
+                    html += '</p>';
+                html += '</a>';
+            html += '</li>';
+        });
+
+        // append
+        if (Vars.boxOffers) {
+            Vars.boxOffers.innerHTML = html;
+        }
+
+        // automatic scroll
+        setInterval(function () {
+            if (x === amount) {
+                x = 0;
+
+            } else {
+                x ++;
+            }
+
+            Vars.boxOffers.scrollTo({
+                top: parseFloat(45 * x),
+                behavior: 'smooth'
+            });
+        }, 4000);
     };
 
     /* generate randomic fruits */
